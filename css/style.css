@@ -1,0 +1,119 @@
+/* Застосується до всіх тегів з класом title */
+.title {
+  font-weight: 500;
+}
+
+/* Застосується до всіх тегів з класом text */
+.text {
+  color: brown;
+  font-size: 18px;
+}
+
+/* Застосується до всіх тегів з класом link */
+.link {
+  text-decoration: none;
+}
+/* Загальні стилі для всіх типів повідомлень */
+.alert {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Специфічні стилі для кожного типу */
+.success {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+#title {
+  font-weight: 500;
+  color: orange;
+}
+/* ❌ Застосується до всіх посилань у документі */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* ✅ Застосується тільки до посилань, які лежать всередині тегу з класом social-links */
+.social-links a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* ❌ Не вирішує завдання */
+.menu li {
+  border: 1px solid tomato;
+}
+/* ✅ Те, що потрібно */
+.menu > li {
+  border: 1px solid tomato;
+}
+
+a[title] {
+  color: teal;
+}
+
+/* Незвичне форматування фігурних дужок - це нормально */
+a[href="https://htmlreference.io"]
+{
+  color: teal;
+}
+
+a[href="https://cssreference.io"]
+{
+  color: orange;
+}
+
+a[href="https://www.youtube.com"]
+{
+  color: tomato;
+}
+
+.social-links .link {
+  color: teal;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+  color: orange;
+}
+
+.social-links .link:active {
+  color: red;
+}
+
+.social-links .link:visited {
+  color: green;
+}
+
+.schedule-body > tr:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* Оформлення таблиці */
+.schedule {
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  padding: 8px;
+  border: 1px solid #212121;
+}
+
+.text {
+  background-color: tomato;
+  color: white;
+}
+/* Чистий червоний колір з прозорістю 30% */
+p {
+	background-color: rgba(255, 0, 0, 0.1);
+  }
