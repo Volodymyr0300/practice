@@ -8,194 +8,31 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <p>Всі права захищені &copy; Lex, 2020</p>
-    <p>Всі права захищені &#169; Lex, 2020</p>
-    <p>Всі права захищені &#xa9; Lex, 2020</p>
-
-    <p>
-      Для напівжирного тексту, виділіть його тегами &lt;strong&gt; і
-      &lt;/strong&gt;.
-    </p>
-
-    <!-- <video
-      src="http://techslides.com/demos/sample-videos/small.webm"
-      poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-      width="640"
-      controls
-      autoplay
-      loop
-      preload="auto"
-    ></video> -->
-
-    <video
-      poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-      width="640"
-      controls
-    >
-      <source
-        src="http://techslides.com/demos/sample-videos/small.webm"
-        type="video/webm"
-      />
-      <source
-        src="http://techslides.com/demos/sample-videos/small.mp4"
-        type="video/mp4"
-      />
-      <source
-        src="http://techslides.com/demos/sample-videos/small.ogg"
-        type="video/ogg"
-      />
-    </video>
-
-    <audio controls>
-      <source src="song.mp3" type="audio/mpeg" />
-      <source src="song.ogg" type="audio/ogg" />
-    </audio>
-
-    <span>&#174;</span>
-
-    <table>
-      <caption>
-        What is the difference between block, inline and inline-block
-      </caption>
-      <thead>
-        <tr>
-          <th>/</th>
-          <th>block</th>
-          <th>inline</th>
-          <th>inline-block</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>height determined</td>
-          <td colspan="3">by height of content</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>width determined</td>
-          <td>by width of parent element</td>
-          <td colspan="2">by width of content</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Is it possible to set height and width</td>
-          <td>yes</td>
-          <td>no</td>
-          <td>yes</td>
-        </tr>
-        <tr>
-          <td>How line wrapping works</td>
-          <td>always on a new line</td>
-          <td colspan="2">only when filling the width of the parent element</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-    <!-- creating css -->
-    <h1 class="title">Привіт, я Mango.</h1>
-    <p class="text">
-      Ласкаво просимо на мою особисту сторінку. Тут можна подивитися
-      <a class="link" href="">проекти</a>.
-    </p>
-    <p class="alert success">Поповнення рахунку виконано</p>
-    <p class="alert warning">Увага, будуть змінені тарифи</p>
-    <p class="alert error">Помилка проведення транзакції</p>
-
-    <h1 id="title">Заголовок сторінки</h1>
-
-    <a href="">Читайте наш блог!</a>
-
-    <ul class="social-links">
-      <li>
-        <a href="">Twitter</a>
-      </li>
-      <li>
-        <a href="">Instagram</a>
-      </li>
-      <li>
-        <a href="">Facebook</a>
-      </li>
-    </ul>
-
-    <ul class="menu">
-      <li>
-        Комп'ютери та комплектуючі
-        <ul class="submenu">
-          <li>Процесори</li>
-          <li>Монітори</li>
-          <li>Відеокарти</li>
-        </ul>
-      </li>
-      <li>
-        Побутова техніка
-        <ul class="submenu">
-          <li>Холодильники</li>
-          <li>Телевізори</li>
-          <li>Пральні машини</li>
-        </ul>
-      </li>
-      <li>
-        Товари для дому
-        <ul class="submenu">
-          <li>Крісла</li>
-          <li>Матраци</li>
-          <li>Електрокаміни</li>
-        </ul>
-      </li>
-    </ul>
-
-    <a href="https://htmlreference.io" title="Довідник тегів">
-      htmlreference.io
-    </a>
-    <a href="https://cssreference.io" title="Довідник стилів">
-      cssreference.io
-    </a>
-    <a href="https://www.youtube.com">YouTube</a>
-
-    <p>
-      Хорошу шпаргалку з тегів можна знайти
-      <a class="link" href="https://htmlreference.io">за посиланням</a>.
-    </p>
-
-    <ul class="social-links">
-      <li><a class="link" href="https://twitter.com">Twitter</a></li>
-      <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
-      <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
-    </ul>
-
-    <table class="schedule">
-      <thead>
-        <tr>
-          <th>Номер</th>
-          <th>Маршрут</th>
-          <th>Час у дорозі</th>
-        </tr>
-      </thead>
-
-      <tbody class="schedule-body">
-        <tr>
-          <td>433</td>
-          <td>Київ - Ковель</td>
-          <td>5 годин</td>
-        </tr>
-        <tr>
-          <td>701</td>
-          <td>Харків - Дніпро</td>
-          <td>7 годин</td>
-        </tr>
-        <tr>
-          <td>258</td>
-          <td>Львів - Одеса</td>
-          <td>4 годин</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p class="text">
+    <!-- <p class="text">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
       commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
       impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
-    </p>
+    </p> -->
+
+    <!-- <article>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        commodi, veritatis nihil alias iste odit similique sit eius optio
+        veniam, impedit cumque fuga facere labore quo id necessitatibus quaerat
+        rerum.
+      </p>
+      <a href="">Читати далі...</a>
+    </article> -->
+    <article class="post">
+      <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        commodi, veritatis nihil alias iste odit similique sit eius optio
+        veniam, impedit cumque fuga facere labore quo id necessitatibus quaerat
+        rerum.
+      </p>
+      <a href="" class="post-link">Читати далі...</a>
+    </article>
   </body>
 </html>
