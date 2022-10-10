@@ -85,3 +85,11 @@ pre::first-letter {
   color: red;
   font-size: 20px;
 }
+
+
+[type]{
+	color: white;
+}
+button[type="reset"]{
+	color: green
+}
