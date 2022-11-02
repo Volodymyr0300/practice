@@ -127,15 +127,10 @@ button[type="reset"]{
   margin: 100px;
   background-color: #ffeb3b;
 } */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-.body {
+/* .body {
   font-family: sans-serif;
   line-height: 1.5;
-}
+} */
 /* .outer-box {
   width: 200px;
   height: 200px;
@@ -255,11 +250,341 @@ p {
   align-items: center;
   background-color: #f9f9fd;
 } */
-body {
+/* body {
   margin: 0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f9f9fd;
+} */
+/*
+* {
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #f9f9fd;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.thumb {
+  position: relative;
+  margin: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.thumb > .label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px 16px;
+  border-bottom-left-radius: 4px;
+
+  font-family: sans-serif;
+  font-size: 24px;
+  background-color: #2196f3;
+  color: #fff;
+}
+*/
+/*
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.chat-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1653/1653630.png");
+  background-size: contain;
+
+  cursor: pointer;
+}
+* /
+
+*/
+
+/*
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f9f9fd;
+  color: #2a2a2a;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  position: sticky;
+  top: -1px;
+
+  margin: 0;
+  padding: 16px;
+  background-color: #ccc;
+  text-align: center;
+  text-transform: uppercase;
+
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.section-text {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.section:nth-child(1) .section-title {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+}
+
+.section:nth-child(2) .section-title {
+  background-image: repeating-linear-gradient(
+    to right,
+    #f6ba52,
+    #f6ba52 10px,
+    #ffd180 10px,
+    #ffd180 20px
+  );
+}
+
+.section:nth-child(3) .section-title {
+  color: #fff;
+  background-image: repeating-radial-gradient(
+    circle,
+    purple,
+    purple 10px,
+    #4b026f 10px,
+    #4b026f 20px
+  );
+}
+
+.section:nth-child(4) .section-title {
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    to right,
+    #ff8a00,
+    #ff8a00 10px,
+    #e52e71 10px,
+    #e52e71 20px
+  );
+}
+*/
+/*
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f9f9fd;
+}
+
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 64px;
+  color: #fff;
+
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.box:nth-child(1) {
+  top: 20px;
+  left: 130px;
+  background-color: #1789fc;
+
+  z-index: 2;
+}
+
+.box:nth-child(2) {
+  top: 30px;
+  left: 230px;
+  background-color: #ef233c;
+
+  z-index: 2;
+}
+
+.box:nth-child(3) {
+  top: 140px;
+  left: 220px;
+  background-color: #ffd07b;
+  z-index: 1;
+}
+
+.box:nth-child(4) {
+  top: 120px;
+  left: 120px;
+  background-color: #4caf50;
+}
+*/
+/*
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	line-height: 1.5;
+	font-family: sans-serif;
+  }
+  
+  .box {
+	border: 2px solid tomato;
+	width: 400px;
+	height: 200px;
+  
+	overflow: auto;
+  }
+  */
+/*
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #f9f9fd;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #bdbdbd;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+.box:hover .overlay {
+  transform: translatex(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3f51b5;
+
+  transform: translatex(-100%);
+  transition: transform 250ms ease;
+}
+
+.overlay > p {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.overlay code {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #2a2a2a;
+}
+*/
+/*
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9fd;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: tomato;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /*  Задаём значения перехода  */
+  /*
+  transition-property: background-color, transform;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+}
+
+/* При ховере меняем значения анимируемых свойств */
+/*
+.box:hover {
+  background-color: teal;
+  transform: rotate(180deg);
+}
+*/
+
