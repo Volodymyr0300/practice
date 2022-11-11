@@ -758,3 +758,40 @@ p {
   
 }
  */
+.option {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.check {
+  padding-left: 1.2em;
+}
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check__box {
+  position: absolute;
+  margin-left: -1.2em;
+  width: 1em;
+  height: 1em;
+  /* background-color: tomato; */
+  background-image: url(../img/not-checked.svg);
+  background-repeat: no-repeat;
+}
+
+.check__input:checked + .check__box {
+  background-image: url(../img/checked.svg);
+  background-repeat: no-repeat;
+}
+
+/* .check__input:focus + .check__box {
+  background-image: url(../img/checked.svg);
+} */
+/* .check__input:focus:checked + .check__box {
+  background-image: url(../img/checked.svg);
+} */
