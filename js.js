@@ -509,3 +509,246 @@
 // console.log(checkStorage(200, 20));
 // console.log(checkStorage(200, 150));
 // console.log(checkStorage(150, 180));
+
+// Функція getSubscriptionPrice(type) отримує рядок з типом передплати користувача (параметр type),
+// перевіряє її на збіг з трьома можливими типами щомісячної передплати та повертає ціну, що зберігається
+// у змінній price.
+// Якщо значення параметра type - це рядок:
+// "starter" - ціна передплати 0 кредитів.
+// "professional" - ціна передплати 20 кредитів.
+// "organization" - ціна передплати 50 кредитів.
+// Спочатку в тілі функції була інструкція if...else, яка виглядала ось так.
+// if (type === "starter") {
+//   price = 0;
+// } else if (type === "professional") {
+//   price = 20;
+// } else if (type === "organization") {
+//   price = 50;
+// }
+// Після рефакторингу інструкція if..else була замінена на switch.
+// Доповни код інструкції switch, щоб функція працювала правильно.
+// function getSubscriptionPrice(type) {
+//   let price;
+//   // Change code below this line
+//   switch (
+//     type // Change this line
+//   ) {
+//     case 'starter': // Change this line
+//       price = 0; // Change this line
+//       break;
+//     case 'professional': // Change this line
+//       price = 20; // Change this line
+//       break;
+//     case 'organization': // Change this line
+//       price = 50; // Change this line
+//       break;
+//   }
+//   // Change code above this line
+//   return price;
+// }
+// console.log(getSubscriptionPrice('professional'));
+// console.log(getSubscriptionPrice('organization'));
+// console.log(getSubscriptionPrice('starter'));
+
+// Функція checkPassword(password) отримує пароль в параметр password, перевіряє його на збіг з паролем адміністратора
+// у змінній ADMIN_PASSWORD і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
+// Якщо значення параметра password:
+// дорівнює null, значить користувач скасував операцію і в message записується рядок "Canceled by user!".
+// збігається зі значенням ADMIN_PASSWORD, у змінну message присвоюється рядок "Welcome!".
+// не задовольняє жодну з попередніх умов, у змінну message записується рядок "Access denied, wrong password!".
+// Зроби рефакторинг коду, замінивши інструкцію if..else на switch, і не забудь про блок default (аналог else).
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+//   // Change code below this line
+//   //   if (password === null) {
+//   //     message = 'Canceled by user!';
+//   //   } else if (password === ADMIN_PASSWORD) {
+//   //     message = 'Welcome!';
+//   //   } else {
+//   //     message = 'Access denied, wrong password!';
+//   //   }
+//   switch (password) {
+//     case null:
+//       message = 'Canceled by user!';
+//       break;
+//     case 'jqueryismyjam':
+//       message = 'Welcome!';
+//       break;
+//     default:
+//       message = 'Access denied, wrong password!';
+//   }
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkPassword('mangohackzor'));
+// console.log(checkPassword(null));
+// console.log(checkPassword('polyhax'));
+// console.log(checkPassword('jqueryismyjam'));
+
+// Функція getShippingCost(country) повинна перевіряти можливість доставки товару в країну користувача (параметр country)
+// і повертати повідомлення про результат, що зберігається у змінній message. Обов'язково використовуй інструкцію switch.
+// Формат рядка, що повертається "Shipping to <country> will cost <price> credits", де замість <country> і <price>,
+// необхідно підставити відповідні значення.
+// Список країн і вартість доставки:
+// China - 100 кредитів
+// Chile - 250 кредитів
+// Australia - 170 кредитів
+// Jamaica - 120 кредитів
+// Зі списку видно, що доставка можлива не скрізь. Якщо зазначена країна відсутня у списку, то функція повинна повернути
+// рядок "Sorry, there is no delivery to your country"
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
+//   let price;
+//   switch (country) {
+//     case 'China':
+//       price = 100;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case 'Chile':
+//       price = 250;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case 'Australia':
+//       price = 170;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     case 'Jamaica':
+//       price = 120;
+//       message = `Shipping to ${country} will cost ${price} credits`;
+//       break;
+//     default:
+//       message = 'Sorry, there is no delivery to your country';
+//       break;
+//   }
+//   // Change code above this line
+//   return message;
+// }
+// console.log(getShippingCost('Australia'));
+// console.log(getShippingCost('Germany'));
+// console.log(getShippingCost('China'));
+// console.log(getShippingCost('Chile'));
+// console.log(getShippingCost('Jamaica'));
+// console.log(getShippingCost('Sweden'));
+
+// Функція getNameLength(name) приймає ім'я (параметр name) і повертає рядок, в якому вказана його довжина.
+// Доповни шаблонний рядок у змінній message довжиною рядка з параметра name.
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`; // Change this line
+//   return message;
+// }
+// console.log(getNameLength('Poly'));
+// console.log(getNameLength('Harambe'));
+// console.log(getNameLength('Billy'));
+// console.log(getNameLength('Joe'));
+
+// Доповни код, присвоївши оголошеним змінним вирази звертання до відповідних елементів або властивостей рядка у змінній course.
+// courseTopicLength - довжина рядка.
+// firstElement - перший символ рядка.
+// lastElement - останній символ рядка.
+// const courseTopic = 'JavaScript essentials';
+// // Change code below this line
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+// // Change code above this line
+
+// Функція getSubstring(string, length) приймає рядок і повертає підрядок від початку і до length символів.
+// Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+// string - оригінальний рядок
+// length - кількість символів з початку рядка для підрядка
+// Присвой змінній substring вираз створення підрядка довжиною length символів (від початку) з рядка string.
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length); // Change this line
+//   return substring;
+// }
+// console.log(getSubstring('Hello world', 3)); /* повертає "Hel" */
+// console.log(getSubstring('Hello world', 6)); /* повертає "Hello" */
+// console.log(getSubstring('Hello world', 8)); /* повертає "Hello wo" */
+// console.log(getSubstring('Hello world', 11)); /* повертає "Hello world" */
+// console.log(getSubstring('Hello world', 0)); /* повертає "" */
+
+// Функція formatMessage(message, maxLength) приймає рядок (параметр message) і форматує його,
+// якщо довжина перевищує значення в параметрі maxLength.
+// Доповни код функції таким чином, що якщо довжина рядка:
+// не перевищує maxLength, функція повертає його в початковому вигляді.
+// більша за maxLength, то функція обрізає рядок до maxLength символів
+// і додає в кінець три крапки "...", після чого повертає скорочену версію.
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length <= maxLength) {
+//     result = message;
+//   } else {
+//     message = message.slice(0, maxLength);
+//     result = `${message}...`;
+//   }
+//   /// Change code above this line
+//   return result;
+// }
+// console.log(
+//   formatMessage('Curabitur ligula sapien', 16),
+// ); /* повертає "Curabitur ligula..." */
+// console.log(
+//   formatMessage('Curabitur ligula sapien', 23),
+// ); /* повертає "Curabitur ligula sapien" */
+// console.log(
+//   formatMessage('Vestibulum facilisis purus nec', 20),
+// ); /* повертає "Vestibulum facilisis..." */
+// console.log(
+//   formatMessage('Vestibulum facilisis purus nec', 30),
+// ); /* повертає "Vestibulum facilisis purus nec" */
+// console.log(
+//   formatMessage('Nunc sed turpis a felis in nunc fringilla', 15),
+// ); /* повертає "Nunc sed turpis..." */
+// console.log(
+//   formatMessage('Nunc sed turpis a felis in nunc fringilla', 41),
+// ); /* повертає "Nunc sed turpis a felis in nunc fringilla" */
+
+// Функція checkForName(fullname, name) приймає два параметри та повертає буль true або false - результат перевірки входження підрядка name у рядок fullname.
+// fullname - повне ім'я, що складається з двох слів (імені та прізвища), розділених пробілом.
+// name - ім'я для перевірки входження в повне ім'я.
+// Присвой змінній result вираз перевірки входження імені (параметр name), у повне ім'я (параметр fullname). Нехай функція чітко розрізняє регістр літер, тобто «Петя» і «петя» - для неї різні імена.
+// function checkForName(fullName, name) {
+//   const result = fullName.includes(name); // Change this line
+//   return result;
+// }
+// console.log(checkForName('Egor Kolbasov', 'Egor')); /* повертає true */
+// console.log(checkForName('Egor Kolbasov', 'egor')); /* повертає false */
+// console.log(checkForName('Egor Kolbasov', 'egOr')); /* повертає false */
+// console.log(checkForName('Egor Kolbasov', 'Zhenya')); /* повертає false */
+// console.log(checkForName('Vadim Nekrasov', 'Vadim')); /* повертає true */
+// console.log(checkForName('Vadim Nekrasov', 'vadim')); /* повертає false */
+// console.log(checkForName('Vadim Nekrasov', 'Dima')); /* повертає false */
+
+// Функція checkForSpam(message) приймає рядок (параметр message), перевіряє його на вміст заборонених слів spam і sale, і повертає результат перевірки. Слова в рядку параметра message можуть бути у довільному регістрі, наприклад SPAM або sAlE.
+// Якщо знайшли заборонене слово (spam або sale) то функція повертає буль true.
+// Якщо в рядку відсутні заборонені слова, функція повертає буль false.
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+//   if (message.toLowerCase().includes('spam')) {
+//     result = true;
+//   } else if (message.toLowerCase().includes('sale')) {
+//     result = true;
+//   } else if (
+//     !message.toLowerCase().includes('spam') &&
+//     !message.toLowerCase().includes('sale')
+//   ) {
+//     result = false;
+//   }
+//   // Change code above this line
+//   return result;
+// }
+// console.log(checkForSpam('Latest technology news')); /* повертає false */
+// console.log(checkForSpam('JavaScript weekly newsletter')); /* повертає false */
+// console.log(checkForSpam('Get best sale offers now!')); /* повертає true */
+// console.log(checkForSpam('Amazing SalE, only tonight!')); /* повертає true */
+// console.log(
+//   checkForSpam('Trust me, this is not a spam message'),
+// ); /* повертає true */
+// console.log(
+//   checkForSpam('Get rid of sPaM emails. Our book in on sale!'),
+// ); /* повертає true */
+// console.log(checkForSpam('[SPAM] How to earn fast money?')); /* повертає true */
