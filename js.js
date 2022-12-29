@@ -137,3 +137,348 @@
 // console.log(Number.parseInt(value));
 // console.log(Number.parseFloat(value));
 // console.log(Number(value));
+
+// const validNumber = Number('51'); // 51
+// console.log(Number.isNaN(validNumber)); // false
+// const invalidNumber = Number('qweqwe'); // NaN
+// console.log(Number.isNaN(invalidNumber)); // true
+
+// console.log(0.1 + 0.2 === 0.3); // false
+// console.log(0.1 + 0.2); // 0.30000000000000004
+// console.log(0.4 + 0.2);
+
+// console.log(0.17 + 0.24); // 0.41000000000000003
+// console.log((0.17 * 100 + 0.24 * 100) / 100); // 0.41
+
+// console.log(0.17 + 0.24); // 0.41000000000000003
+// console.log((0.17 + 0.24).toFixed(2)); // 0.41
+
+// // Math.floor(num) - повертає найбільше ціле число,
+// // менше, або яке дорівнює зазначеному числу
+// console.log(Math.floor(1.7)); // 1
+// // Math.ceil(num) - повертає найбільше ціле число,
+// // більше, або яке дорівнює зазначеному числу.
+// console.log(Math.ceil(1.2)); // 2
+// // Math.round(num) - повертає значення числа,
+// // округленого до найближчого цілого
+// console.log(Math.round(1.2)); // 1
+// console.log(Math.round(1.5)); // 2
+// // Math.max(num1, num2, ...) - повертає найбільше ціле число з набору
+// console.log(Math.max(20, 10, 50, 40)); // 50
+// // Math.min(num1, num2, ...) - повертає найменше ціле число з набору
+// console.log(Math.min(20, 10, 50, 40)); // 10
+// // Math.pow(base, exponent) - піднесення до степеня
+// console.log(Math.pow(2, 4)); // 16
+// // Math.random() - повертає псевдовипадкове число в діапазоні [0, 1)
+// console.log(Math.random()); // випадкове число між 0 і 1
+// console.log(Math.random() * (10 - 1) + 1); // псевдовипадкове число від 1 до 10
+
+// const message = 'Mango ' + 'is' + ' happy';
+// console.log(message); // Mango is happy
+// console.log(1 + '2'); // "12"
+// console.log(1 + '2' + 4); // "124"
+// console.log(1 + 2 + '4'); // "34"
+
+// const message = 'Welcome to Bahamas!';
+// console.log(message.length); // 19
+// console.log('There is nothing impossible to him who will try'.length); // 47
+
+// const message = "Welcome to Bahamas!";
+// console.log(message.toLowerCase()); // "welcome to bahamas!"
+// console.log(message.toUpperCase()); // "WELCOME TO BAHAMAS!"
+// console.log(message); // "Welcome to Bahamas!"
+
+// const BRAND_NAME = 'SAMSUNG';
+// const userInput = 'saMsUng';
+// const normalizedToUpperCaseInput = userInput.toUpperCase();
+// console.log(userInput); // 'saMsUng'
+// console.log(userInput === BRAND_NAME); // false
+// console.log(normalizedToUpperCaseInput); // 'SAMSUNG'
+// console.log(normalizedToUpperCaseInput === BRAND_NAME); // true
+
+// const message = 'Welcome to Bahamas!';
+// console.log(message.indexOf('to')); // 8
+// console.log(message.indexOf('hello')); // -1
+// console.log(message.indexOf('elco'));
+
+// const productName = 'Ремонтний дроїд';
+// console.log(productName.includes('н')); // true
+// console.log(productName.includes('Н')); // false
+// console.log(productName.includes('дроїд')); // true
+// console.log(productName.includes('Дроїд')); // false
+// console.log(productName.includes('Ремонтний')); // true
+// console.log(productName.includes('ремонтний')); // false
+
+// const jsFileName = 'script.js';
+// console.log(jsFileName.endsWith('.js')); // true
+// const cssFileName = 'styles.css';
+// console.log(cssFileName.endsWith('.js')); // false
+
+// const jsFileName = 'script.js';
+// const minifiedJsFileName = jsFileName.replace('.js', '.min.js');
+// console.log(minifiedJsFileName); // "script.min.js"
+
+// const cssFileNames = 'styles.css, about.css, portfolio.css';
+// const minifiedCssFileNames = cssFileNames.replaceAll('.css', '.min.css');
+// console.log(minifiedCssFileNames); // "styles.min.css, about.min.css, portfolio.min.css"
+
+// const age = 20;
+// console.log(age > 10 && age < 30); // true && true -> true
+// console.log(1 && 5); // true && true -> 5
+// console.log(5 && 1); // true && true -> 1
+// console.log(0 && 2); // false && true -> 0
+// console.log(2 && 0); // true && false -> 0
+// console.log("" && "Mango"); // false && true -> ""
+// console.log("Mango" && ""); // true && false -> ""
+// console.log("Mango" && "Poly"); // true && true -> "Poly"
+// console.log("Poly" && "Mango"); // true && true -> "Mango"
+
+// console.log(true || false); // true
+// console.log(false || true); // true
+// console.log(true || true); // true
+// console.log(3 || false); // 3
+// console.log(false || 3); // 3
+// console.log(3 || true); // 3
+// console.log(true || 3); // true
+
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!3); // !3 -> !true -> false
+// console.log(!'Mango'); // !"Mango" -> !true -> false
+// console.log(!0); // !0 -> !false -> true
+// console.log(!''); // !"" -> !false -> true
+// const isOnline = true;
+// const isNotOnline = !isOnline; // !isOnline -> !true -> false
+
+// let cost = 0;
+// const subscription = 'pro';
+// if (subscription === 'pro') {
+//   cost = 100;
+// }
+// console.log(cost); // 100
+
+// let cost;
+// const subscription = 'free';
+// if (subscription === 'pro') {
+//   cost = 100;
+// } else {
+//   cost = 0;
+// }
+// console.log(cost); // 0
+
+// let cost;
+// const subscription = 'premium';
+// if (subscription === 'free') {
+//   cost = 0;
+// } else if (subscription === 'pro') {
+//   cost = 100;
+// } else if (subscription === 'premium') {
+//   cost = 500;
+// } else {
+//   console.log('Invalid subscription type');
+// }
+// console.log(cost); // 500
+
+// const age = 20;
+// const type = age >= 18 ? 'adult' : 'child';
+// console.log(type); // "adult"
+
+// const num1 = 5;
+// const num2 = 10;
+// const biggerNumber = num1 > num2 ? num1 : num2;
+// console.log(biggerNumber); // 10
+
+// let cost;
+// const subscription = 'premium';
+// switch (subscription) {
+//   case 'free':
+//     cost = 0;
+//     break;
+//   case 'pro':
+//     cost = 100;
+//     break;
+//   case 'premium':
+//     cost = 500;
+//     break;
+//   default:
+//     console.log('Invalid subscription type');
+// }
+// console.log(cost); // 500
+
+// const cost = 5;
+// switch (cost) {
+//   case 1:
+//     console.log(`Your price is - one dollar! Congratulations!`);
+//     break;
+//   case 2:
+//     console.log(`Your price is - two dollars}! Congratulations!`);
+//     break;
+//   case 3:
+//     console.log(`Your price is - three dollars! Congratulations!`);
+//     break;
+//   case 4:
+//     console.log(`Your price is - four dollars! Congratulations!`);
+//     break;
+//   case 5:
+//     console.log(`Your price is - five dollars! Congratulations!`);
+//     break;
+//   default:
+//     console.log('You have a wrong price!');
+//     break;
+// }
+
+// let counter = 0;
+// while (counter < 10) {
+//   console.log('counter: ', counter);
+//   counter += 1;
+// }
+
+// let clientCounter = 18;
+// const maxClients = 25;
+// while (clientCounter < maxClients) {
+//   console.log(clientCounter);
+//   clientCounter += 1;
+// }
+
+// let password = '';
+// do {
+//   password = prompt('Введіть пароль довший 4-х символів', '');
+// } while (password.length < 5);
+// console.log('Ввели пароль: ', password);
+
+// for (let i = 0; i <= 20; i += 5) {
+//   console.log(i);
+// }
+
+// const target = 3;
+// let sum = 0;
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
+// console.log(sum);
+
+// const max = 10;
+// for (let i = 0; i < max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
+
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+//   if (i === 3) {
+//     console.log('Знайшли число 3, перериваємо виконання циклу');
+//     // break;
+//   }
+// }
+
+// const number = 10;
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) {
+//     continue;
+//   }
+//   console.log('Непарне i: ', i); // 1, 3, 5, 7, 9
+// }
+
+// Функція checkPassword(password) отримує пароль користувача в параметр password,
+// перевіряє його на збіг з паролем адміністратора у змінній ADMIN_PASSWORD
+// і повертає повідомлення про результат порівняння, яке зберігається у змінній message.
+// Якщо значення параметра password дорівнює null, значить користувач скасував операцію
+// і в message записується рядок "Canceled by user!".
+// Якщо значення параметра password збігається зі значенням ADMIN_PASSWORD, у змінну
+// message присвоюється рядок "Welcome!".
+// Якщо жодна з попередніх умов не виконалася, у змінну message записується рядок
+// "Access denied, wrong password!".
+// ТЕСТИ
+// Оголошена функція checkPassword(password)
+// Виклик checkPassword("mangohackzor") повертає "Access denied, wrong password!"
+// Виклик checkPassword(null) повертає "Canceled by user!"
+// Виклик checkPassword("polyhax") повертає "Access denied, wrong password!"
+// Виклик checkPassword("jqueryismyjam") повертає "Welcome!"
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+//   if (password !== ADMIN_PASSWORD) {
+//     // Change this line
+//     message = 'Canceled by user!';
+//   } else if (password === ADMIN_PASSWORD) {
+//     // Change this line
+//     message = 'Welcome!';
+//   } else {
+//     message = 'Access denied, wrong password!';
+//   }
+//   return message;
+// }
+// checkPassword('mangohackzor');
+// checkPassword(null);
+// checkPassword('polyhax');
+// checkPassword('jqueryismyjam');
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//   if (ordered === 0) {
+//     message = 'There are no products in the order!';
+//   } else if (ordered > available) {
+//     message = 'Your order is too large, there are not enough items in stock!';
+//   } else {
+//     message = 'The order is accepted, our manager will contact you';
+//   }
+//   // Change code above this line
+//   return message;
+// }
+
+// function isNumberInRange(start, end, number) {
+//   const isInRange = start <= number && number <= end; // Change this line
+//   return isInRange;
+// }
+// console.log(isNumberInRange(10, 30, 17));
+// console.log(isNumberInRange(10, 30, 5));
+// console.log(isNumberInRange(20, 50, 24));
+// console.log(isNumberInRange(20, 50, 76));
+
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = !(number >= start && number <= end); // Change this line
+//   return isNotInRange;
+// }
+// Виклик isNumberNotInRange(10, 30, 17) повертає false
+// Виклик isNumberNotInRange(10, 30, 5) повертає true
+// Виклик isNumberNotInRange(20, 50, 24) повертає false
+// Виклик isNumberNotInRange(20, 50, 76) повертає true
+
+// Функція getDiscount(totalSpent) визначає значення знижки, залежно від загальної суми витрачених грошей
+// (параметр totalSpent) в магазині за весь час (партнерська програма). Знижка записується у змінну discount
+// і повертається з функції як результат її роботи.
+// Використовуючи розгалуження і логічні оператори, доповни код функції.
+// Якщо витрачено від 50000 (включно) або більше кредитів - знижка 10% (золотий партнер)
+// Якщо витрачено від 20000 (включно) до 50000 кредитів - знижка 5% (срібний партнер)
+// Якщо витрачено від 5000 (включно) до 20000 кредитів - знижка 2% (бронзовий партнер)
+// Якщо витрачено менше 5000 кредитів - знижка 0 (базовий партнер)
+// Значення знижок кожного рівня зберігаються в однойменних константах
+// BASE_DISCOUNT, BRONZE_DISCOUNT, SILVER_DISCOUNT і GOLD_DISCOUNT.
+
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+//   // Change code below this line
+//   if (totalSpent >= 50000) {
+//     discount = GOLD_DISCOUNT;
+//   } else if (20000 <= totalSpent && totalSpent < 50000) {
+//     discount = SILVER_DISCOUNT;
+//   } else if (5000 <= totalSpent && totalSpent < 20000) {
+//     discount = BRONZE_DISCOUNT;
+//   } else if (totalSpent < 5000) {
+//     discount = BASE_DISCOUNT;
+//   }
+//   // Change code above this line
+//   return discount;
+// }
+// console.log(getDiscount(137000)); /* повертає 0.1 */
+// console.log(getDiscount(46900)); /* повертає 0.05 */
+// console.log(getDiscount(8250)); /* повертає 0.02 */
+// console.log(getDiscount(1300)); /* повертає 0 */
+// console.log(getDiscount(5000)); /* повертає 0.02 */
+// console.log(getDiscount(20000)); /* повертає 0.05 */
+// console.log(getDiscount(50000)); /* повертає 0.1 */
