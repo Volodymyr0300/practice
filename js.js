@@ -482,3 +482,30 @@
 // console.log(getDiscount(5000)); /* повертає 0.02 */
 // console.log(getDiscount(20000)); /* повертає 0.05 */
 // console.log(getDiscount(50000)); /* повертає 0.1 */
+
+// рефакторінг з тернарним оператором
+// if (ordered > available) {
+//     message = "Not enough goods in stock!";
+//   } else {
+//     message = "The order is accepted, our manager will contact you";
+//   }
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//   //   if (ordered > available) {
+//   //     message = 'Not enough goods in stock!';
+//   //   } else {
+//   //     message = 'The order is accepted, our manager will contact you';
+//   //   }
+//   message =
+//     ordered > available
+//       ? 'Not enough goods in stock!'
+//       : 'The order is accepted, our manager will contact you';
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
+// console.log(checkStorage(150, 180));
