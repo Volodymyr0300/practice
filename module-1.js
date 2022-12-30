@@ -752,3 +752,74 @@
 //   checkForSpam('Get rid of sPaM emails. Our book in on sale!'),
 // ); /* повертає true */
 // console.log(checkForSpam('[SPAM] How to earn fast money?')); /* повертає true */
+
+// const max = 5;
+// const min = 0;
+// let value = Math.round(Math.random() * (max - min) + min);
+// console.log(value);
+// let price;
+// switch (value) {
+//   case 0:
+//     price = 0;
+//     console.log(`Price is ${price}.`);
+//     break;
+//   case 1:
+//   case 2:
+//     price = 1;
+//     console.log(`Price is ${price}.`);
+//     break;
+//   case 3:
+//     price = 3;
+//     console.log(`Price is ${price}.`);
+//     break;
+//   case 4:
+//     price = 4;
+//     console.log(`Price is ${price}.`);
+//     break;
+//   case 5:
+//     price = 5;
+//     console.log(`Price is ${price}.`);
+//     break;
+// }
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(`Price is ${i}.`);
+// }
+
+// // задача була згенерувати цикл якій рахує рандомну сумму рандомної кількості співробітників.
+// const maxCountEmployee = 10;
+// const minCountEmployee = 0;
+// let countEmployee = Math.round(
+//   Math.random() * (maxCountEmployee - minCountEmployee) + minCountEmployee,
+// );
+// console.log(`Count of employee is ${countEmployee}`);
+// let totalSalary = 0;
+// for (let i = 0; i <= countEmployee; i += 1) {
+//   const maxSalary = 1000;
+//   const minSalary = 100;
+//   let salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
+//   console.log(`Salary of that empolyee is ${salary}`);
+//   totalSalary += salary;
+//   console.log(`Total amount is ${totalSalary}`);
+//   if (i + 1 > countEmployee) {
+//     console.log(`In last iteration totalSalary  is ${totalSalary}`);
+//   }
+// }
+
+// // задача порахувати суму всіх не четних чисел
+// let sumOfNumbers = 0;
+// for (let i = 0; i < 10; i += 1) {
+//   if (i % 2 === 0) {
+//     sumOfNumbers += i;
+//   }
+// }
+// console.log(sumOfNumbers);
+// // рішення з - якщо не рівно то пропускаємо
+// let sumOfNumbers2 = 0;
+// for (let i = 0; i < 10; i += 1) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+//   sumOfNumbers2 += i;
+// }
+// console.log(sumOfNumbers2);
