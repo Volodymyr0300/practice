@@ -824,8 +824,7 @@
 // }
 // console.log(sumOfNumbers2);
 
-function squareDigits(num) {
-  return num * 2;
-}
-
-console.log(squareDigits(10));
+// function squareDigits(num) {
+//   return num * 2;
+// }
+// console.log(squareDigits(10));
