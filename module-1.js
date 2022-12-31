@@ -823,3 +823,9 @@
 //   sumOfNumbers2 += i;
 // }
 // console.log(sumOfNumbers2);
+
+function squareDigits(num) {
+  return num * 2;
+}
+
+console.log(squareDigits(10));
