@@ -128,3 +128,217 @@
 // console.log(allClientsWithNewFirst); // ["Monkong", "Singu", "Mango", "Ajax", "Poly", "Kiwi"]
 // console.log(oldClients); // ["Mango", "Ajax", "Poly", "Kiwi"]
 // console.log(newClients); // ["Monkong", "Singu"]
+
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(numbers);
+// console.table(numbers);
+
+// const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// function sum(elemensts) {
+//   let total = 0;
+//   for (const num of elemensts) {
+//     total += num;
+//   }
+//   return total;
+// }
+// console.log(sum(arr));
+
+// const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let total = 0;
+// for (let i = 0; i < arr.length; i += 1) {
+//   total += arr[i];
+// }
+// console.log('Total: ', total);
+
+// const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let total = 0;
+// for (const item of arr) {
+//   total += arr[item];
+// }
+// console.log('Total: ', total);
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
+// let total = 0;
+// for (const item of numbers) {
+//   if (item % 2 === 0) {
+//     total += item;
+//     continue;
+//   }
+// }
+// console.log(total);
+
+// const logins = ['dafq2f32', '3e23f2fo2', '23e232dsvs', '1313fnkfnd'];
+// const loginToFind = '23e232dsvs';
+// const loginIs = 'Login is finded';
+// const loginIsNT = "login is't finded";
+// !!! 1 variant
+// for (let i = 0; i < logins.length; i += 1) {
+//   if (logins[i] === loginToFind) {
+//     console.log('Login is finded!');
+//     break;
+//   }
+//   console.log("login is't finded");
+// }
+// !!! 2 variant
+// for (const login of logins) {
+//   if (logins[login] === loginToFind) {
+//     console.log('Login is finded!');
+//     break;
+//   }
+// }
+// !!! 3 variant
+// console.log(logins.includes(loginToFind));
+// !!! 4 variant
+// let message = logins.includes(loginToFind)
+//   ? console.log(loginIs)
+//   : console.log(loginIsNT);
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let maxNum = 0;
+// ! 1 variant
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < maxNum) {
+//     continue;
+//   } else {
+//     maxNum = numbers[i];
+//   }
+// }
+// console.log(maxNum);
+// ! 2 variant
+// for (let i = 0; i < numbers.length; i += 1) {
+//   maxNum = numbers[i] > maxNum ? numbers[i] : maxNum;
+// }
+// console.log(maxNum);
+// ! 3 variant
+// for (const number of numbers) {
+//   console.log(number);
+//   if (maxNum < number) {
+//     maxNum = number;
+//   }
+// }
+// console.log(maxNum);
+
+// const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+// ! 1 variant
+// let string = '';
+// for (const i of friends) {
+//   string += i + ',';
+// }
+// console.log(string.slice(0, string.length - 1));
+// ! 2 variant
+// const string = friends.join(', ');
+// console.log(string);
+
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
+// ! 1 variant
+// for (const letter of letters) {
+//   if (letter === letter.toLowerCase()) {
+//     invertedString += letter.toUpperCase();
+//   } else {
+//     invertedString += letter.toLowerCase();
+//   }
+// }
+// console.log(invertedString);
+// ! 2 variant
+// for (const letter of letters) {
+//   invertedString =
+//     letter === letter.toLowerCase()
+//       ? (invertedString += letter.toUpperCase())
+//       : (invertedString += letter.toLowerCase());
+// }
+// console.log(invertedString);
+// ! 3 version
+// for (const letter of letters) {
+//   invertedString +=
+//     letter === letter.toLowerCase()
+//       ? letter.toUpperCase()
+//       : letter.toLowerCase();
+// }
+// console.log(invertedString);
+
+// ! 1 version
+// const title = 'Top ten benefits for React framework';
+// const normalizedTitle = title.toLowerCase();
+// console.log(normalizedTitle);
+// const words = normalizedTitle.split(' ');
+// console.log(words);
+// const slug = words.join('-');
+// console.log(slug);
+// ! 2 version
+// const title = 'Top ten benefits for React framework';
+// console.log(title);
+// const slug = title.toLowerCase().split(' ').join('-');
+// console.log(slug);
+
+// const arr1 = [5, 10, 15, 20];
+// const arr2 = [10, 20, 30];
+// const newArr = arr1.concat(arr2);
+// let sum = 0;
+// console.log(newArr);
+// ! 1 version
+// for (let i = 0; i < newArr.length; i += 1) {
+//   sum += newArr[i];
+// }
+// console.log(sum);
+// ! 2 version
+// for (const item of newArr) {
+//   sum += item;
+// }
+// console.log(sum);
+
+// const cards = [
+//   'Карточка-1',
+//   'Карточка-2',
+//   'Карточка-3',
+//   'Карточка-4',
+//   'Карточка-5',
+// ];
+// console.table(cards);
+// // ! toRemove
+// const cardToRemove = 'Карточка-3';
+// const index = cards.indexOf(cardToRemove);
+// console.log(index);
+// cards.splice(index, 1);
+// console.table(cards);
+// // !tToInsert
+// const cardToInsert = 'Карточка-3';
+// // cards.push(cardToInsert);
+// cards.splice(2, 0, cardToInsert);
+// console.table(cards);
+// // ! toUpdate
+// const cardToUpdate = 'Карточка-6';
+// cards.splice(4, 1, cardToUpdate);
+// console.table(cards);
+
+// function checkAge(age) {
+//   if (age >= 18) {
+//     // Change this line
+//     return 'You are an adult';
+//   }
+//   return 'You are a minor';
+// }
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   // Change code below this line
+//   if (password === ADMIN_PASSWORD) {
+//     return 'Welcome!';
+//   }
+//   return 'Access denied, wrong password!';
+//   // Change code above this line
+// }
+// console.log(checkPassword('jqueryismyjam'));
+
+function checkStorage(available, ordered) {
+  // Change code below this line
+  if (ordered === 0) {
+    return 'Your order is empty!';
+  } else if (ordered > available) {
+    return 'Your order is too large, not enough goods in stock!';
+  } else {
+    return 'The order is accepted, our manager will contact you';
+  }
+  // Change code above this line
+}
