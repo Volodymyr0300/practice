@@ -451,31 +451,211 @@
 // Значенням параметра title будуть рядки, слова яких розділені лише пробілами
 // Усі символи slug повинні бути у нижньому регістрі
 // Всі слова slug повинні бути розділені тире
-function slugify(title) {
-  // Change code below this line
-  title = title.toLowerCase().split('');
-  //   console.log(title);
-  //   console.log(typeof title);
-  for (const i of title) {
-    if (i === ' ') {
-      title.splice(i, 1, '-');
-    } else {
-      continue;
-    }
-    // console.log(title);
+// ! 1. перевести в нижній регістр
+// ! 2. перевести в масив
+// ! 3. виявити пробіли
+// ! 4. замінити пробіли на тире
+// let string = 'Hello world';
+// console.log(string);
+// function slugify(title) {
+//   let arr = title.toLowerCase().split('');
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] === ' ') {
+//       arr[i] = '-';
+//     } else {
+//       continue;
+//     }
+//   }
+//   arr = arr.join('');
+//   return arr;
+//   //   // Change code above this line
+// }
+// console.log(
+//   slugify('Arrays for begginers'),
+// ); /* повертає "arrays-for-begginers" */
+// console.log(
+//   slugify('English for developer'),
+// ); /* повертає "english-for-developer" */
+// console.log(
+//   slugify('Ten secrets of JavaScript'),
+// ); /* повертає "ten-secrets-of-javascript" */
 
-    let newArr = title.join();
-    return newArr;
-  }
+// // Доповни код таким чином, щоб змінні містили часткові копії вихідного масиву fruits.
+// // firstTwoEls - масив із перших двох елементів
+// // nonExtremeEls - масив з усіх елементів, крім першого та останнього
+// // lastThreeEls - масив із трьох останніх елементів
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// // Change code below this line
+// const firstTwoEls = fruits.slice(0, 2);
+// console.log(firstTwoEls);
+// const nonExtremeEls = fruits.slice(1, 4);
+// console.log(nonExtremeEls);
+// const lastThreeEls = fruits.slice(2);
+// console.log(lastThreeEls);
+// // Оголошена змінна fruits
+// // Значення змінної fruits - це масив ["apple", "plum", "pear", "orange", "banana"]
+// // Оголошена змінна firstTwoEls
+// // Значення змінної firstTwoEls - це масив ["apple", "plum"]
+// // Оголошена змінна nonExtremeEls
+// // Значення змінної nonExtremeEls - це масив ["plum", "pear", "orange"]
+// // Оголошена змінна lastThreeEls
+// // Значення змінної lastThreeEls - це масив ["pear", "orange", "banana"]
+// // Змінній lastThreeEls присвоєна копія частини масиву fruits після застосування методу slice з правильними аргументами
 
-  // Change code above this line
-}
-console.log(
-  slugify('Arrays for begginers'),
-); /* повертає "arrays-for-begginers" */
-console.log(
-  slugify('English for developer'),
-); /* повертає "english-for-developer" */
-console.log(
-  slugify('Ten secrets of JavaScript'),
-); /* повертає "ten-secrets-of-javascript" */
+// // Доповни код таким чином, щоб у змінній allClients утворився масив усіх елементів масивів oldClients і newClients.
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+// const allClients = oldClients.concat(newClients); // Change this line
+// // Оголошена змінна oldClients
+// // Значення змінної oldClients - це масив ["Mango", "Ajax", "Poly", "Kiwi"]
+// // Оголошена змінна newClients
+// // Значення змінної newClients - це масив ["Peach", "Houston"]
+// // Оголошена змінна allClients
+// // Значення змінної allClients - це масив ["Mango", "Ajax", "Poly", "Kiwi", "Peach", "Houston"]
+// // Змінній allClients присвоєний масив після застосування методу concat з правильними аргументами
+
+// // Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення нового масиву
+// // з усіма елементами двох вихідних firstArray і secondArray.
+// // Параметр maxLength містить максимально допустиму довжину нового масиву.
+// // Якщо кількість елементів нового масиву більша за maxLength,
+// // функція повинна повернути копію масиву довжиною maxLength елементів.
+// // В іншому випадку функція повинна повернути новий масив повністю.
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   let arr = firstArray.concat(secondArray);
+//   if (arr.length > maxLength) {
+//     return arr.slice(0, maxLength);
+//   }
+//   return arr;
+//   // Change code above this line
+// }
+// console.log(
+//   makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3),
+// ); /* повертає ["Mango", "Poly", "Ajax"] */
+// console.log(
+//   makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4),
+// ); /* повертає ["Mango", "Poly", "Houston", "Ajax"] */
+// console.log(
+//   makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3),
+// ); /* повертає ["Mango", "Ajax", "Chelsea"] */
+// console.log(
+//   makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2),
+// ); /* повертає ["Earth", "Jupiter"] */
+// console.log(
+//   makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4),
+// ); /* повертає ["Earth", "Jupiter", "Neptune", "Uranus"] */
+// console.log(
+//   makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0),
+// ); /* повертає [] */
+// // Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
+
+// // Доповни цикл for таким чином, щоб він логував всі цілі числа в діапазоні від start до end включно.
+// const start = 3;
+// const end = 7;
+// for (let i = start; i <= end; i += 1) { // Change this line
+//   console.log(i);
+// }
+// // Оголошена змінна start
+// // Значення змінної start - це число 3
+// // Оголошена змінна end
+// // Значення змінної end - це число 7
+// // Оголошена змінна i - лічильник циклу
+// // Початкове значення змінної i дорівнює 3
+// // Умова циклу приводиться до true доти, доки i менше або дорівнює 7
+// // На кожній ітерації значення змінної i збільшується на одиницю
+// // Виведення у консоль змінної i покаже числа 3, 4, 5, 6, 7
+
+// // Напиши функцію calculateTotal(number), яка приймає ціле число (параметр number)
+// // і повертає суму всіх цілих чисел від одиниці і до цього числа.
+// // Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+//   // Change code above this line
+// }
+// // Оголошена функція calculateTotal(number)
+// // Виклик функції calculateTotal(1) повертає 1
+// // Виклик функції calculateTotal(3) повертає 6
+// // Виклик функції calculateTotal(7) повертає 28
+// // Виклик функції calculateTotal(18) повертає 171
+// // Виклик функції calculateTotal(24) повертає 300
+// // Виклик функції calculateTotal() з випадковим числом повертає правильне значення
+
+// // Доповни код циклу for таким чином, щоб він послідовно логував усі елементи масиву fruits.
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+// for (let i = 0; i < fruits.length; i += 1) {
+//   // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+// // Оголошена змінна fruits
+// // Значення змінної fruits - це масив ["apple", "plum", "pear", "orange"]
+// // Оголошена змінна i - лічильник циклу
+// // Початкове значення змінної i дорівнює 0
+// // Умова циклу приводиться до true доти, доки i менше за 4
+// // На кожній ітерації значення змінної i збільшується на одиницю
+// // В тілі циклу for оголошується змінна const fruit і цій змінній присвоюється значення - елемент масиву
+// // В тілі циклу for використовується виведення у консоль змінної fruit
+
+// // Напиши функцію calculateTotalPrice(order), яка приймає один параметр order - масив чисел,
+// // і обчислює загальну суму його елементів. Загальна сума елементів повинна зберігатися у змінній total,
+// // яка повертається як результат роботи функції.
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+//   // Change code above this line
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4])); /* повертає 138 */
+// console.log(calculateTotalPrice([164, 48, 291])); /* повертає 503 */
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176])); /* повертає 1116 */
+// // calculateTotalPrice() з випадковим масивом повертає правильне значення
+
+// // Напиши функцію findLongestWord(string), яка приймає довільний рядок,
+// // що складається тільки зі слів, розділених пробілом (параметр string), і повертає найдовше слово в цьому рядку.
+// function findLongestWord(string) {
+//   // Change code below this line
+//   let arr = string.split(' ');
+//   let maxLetter = '';
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i].length > maxLetter.length) {
+//       maxLetter = arr[i];
+//     }
+//   }
+//   return maxLetter;
+//   // Change code above this line
+// }
+// // Оголошена функція findLongestWord(string)
+// console.log(
+//   findLongestWord('The quick brown fox jumped over the lazy dog'),
+// ); /* повертає jumped */
+// console.log(findLongestWord('Google do a roll')); /* повертає Google */
+// console.log(findLongestWord('May the force be with you')); /* повертає force */
+// // // Виклик функції findLongestWord() з випадковим рядком повертає правильне значення
+
+// // Доповни код функції createArrayOfNumbers(min, max) таким чином,
+// // щоб вона повертала масив усіх цілих чисел від значення min до max.
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//   for (let i = min; i <= max; i += 1) {
+//     numbers = numbers.push(i);
+//   }
+//   // Change code above this line
+//   return numbers;
+// }
+// // Оголошена функція createArrayOfNumbers(min, max)
+// console.log(createArrayOfNumbers(1, 3)); /* повертає [1, 2, 3] */
+// // console.log(createArrayOfNumbers(14, 17)); /* повертає [14, 15, 16, 17] */
+// // console.log(
+// //   createArrayOfNumbers(29, 34),
+// // ); /* повертає [29, 30, 31, 32, 33, 34] */
+// // Виклик функції createArrayOfNumbers() з випадковими min і max повертає правильний масив
+// // В циклі for використовувався метод push
