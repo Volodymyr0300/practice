@@ -453,6 +453,21 @@
 // Всі слова slug повинні бути розділені тире
 function slugify(title) {
   // Change code below this line
+  title = title.toLowerCase().split('');
+  //   console.log(title);
+  //   console.log(typeof title);
+  for (const i of title) {
+    if (i === ' ') {
+      title.splice(i, 1, '-');
+    } else {
+      continue;
+    }
+    // console.log(title);
+
+    let newArr = title.join();
+    return newArr;
+  }
+
   // Change code above this line
 }
 console.log(
