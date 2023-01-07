@@ -921,8 +921,32 @@
 //     // Змінна args буде містити повноцінний масив
 //   }
 
-const filterNumbers = function () {};
-
-console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
-console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
-console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
+// // !
+// // Напиши функцию filterNumbers(array[] number1,... ]) которая:
+// // первым аргументом принимает массив чисел после первого аргумента может быть произвольное количество других аргументов
+// // которые будут числами.
+// // Функция должна вернуть новый массив, в котором будут только те аргументы, начиная со второго,
+// // для которых есть аналог в оригинальном массиве.
+// const filterNumbers = function (arr, ...args) {
+//   // ! first version
+//   //   let newArr = [];
+//   //   for (const i of arr) {
+//   //     for (const j of args) {
+//   //       if (i === j) {
+//   //         newArr.push(i);
+//   //       }
+//   //     }
+//   //   }
+//   //   return newArr;
+//   //   ! second version
+//   let newArr = [];
+//   for (const item of arr) {
+//     if (args.includes(item)) {
+//       newArr.push(item);
+//     }
+//   }
+//   return newArr;
+// };
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
+// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
+// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
