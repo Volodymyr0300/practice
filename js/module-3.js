@@ -1285,12 +1285,216 @@
 // console.log(`Blue: ${blue}`); // "Blue: 255"
 
 // !
+// const numbers = [0, 5, 10, ...[1, 2, 3, 1000, 5, 5000], 4, 5, 1];
+// console.log(numbers);
+
 // !
+// // Надійшов триденний прогноз максимальних температур
+// // і ми рахуємо середню температуру за три дні (meanTemperature).
+// // Заміни оголошення змінних yesterday, today і tomorrow однією
+// // операцією деструктуризації властивостей об'єкта highTemperatures.
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+// const { yesterday, today, tomorrow } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(meanTemperature);
+
+// // Оголошена змінна highTemperatures
+// // Значення змінної highTemperatures - це об'єкт
+// // Оголошена змінна yesterday за допомогою деструктуризації
+// // Значення змінної yesterday - це число 28
+// // Оголошена змінна today за допомогою деструктуризації
+// // Значення змінної today - це число 26
+// // Оголошена змінна tomorrow за допомогою деструктуризації
+// // Значення змінної tomorrow - це число 33
+// // Оголошена змінна meanTemperature
+// // Значення змінної meanTemperature - це число 29
+// // Використовується синтаксис деструктуризації об'єкта highTemperatures
+
 // !
+// // У прогнозі максимальних температур також може бути необов'язкова властивість icon - іконка погоди.
+// // Заміни оголошення змінних yesterday, today, tomorrow і icon
+// // однією операцією деструктуризації властивостей об'єкта highTemperatures.
+// // Задай значення за замовчуванням для icon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+// // const icon = highTemperatures.icon;
+// const {
+//   yesterday,
+//   today,
+//   tomorrow,
+//   icon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// // Оголошена змінна highTemperatures
+// // Значення змінної highTemperatures - це об'єкт
+// // Оголошена змінна highTemperatures
+// // Значення змінної highTemperatures - це об'єкт
+// // Оголошена змінна yesterday за допомогою деструктуризації
+// // Значення змінної yesterday - це число 28
+// // Оголошена змінна today за допомогою деструктуризації
+// // Значення змінної today - це число 26
+// // Оголошена змінна tomorrow за допомогою деструктуризації
+// // Значення змінної tomorrow - це число 33
+// // Оголошена змінна icon за допомогою деструктуризації
+// // Значення змінної icon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+// // Використовується деструктуризація об'єкта
+
 // !
+// // Заміни оголошення змінних highYesterday, highToday,
+// // highTomorrow і highIcon однією операцією деструктуризації властивостей об'єкта highTemperatures.
+// // Задай значення за замовчуванням для highIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// // const highYesterday = highTemperatures.yesterday;
+// // const highToday = highTemperatures.today;
+// // const highTomorrow = highTemperatures.tomorrow;
+// // const highIcon = highTemperatures.icon;
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   icon: highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+// console.log(highTemperatures);
+// console.log(highTemperatures.highIcon);
+// console.log(highYesterday);
+// console.log(highToday);
+// console.log(highTomorrow);
+// console.log(highIcon);
+
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+// // Оголошена змінна highTemperatures
+// // Значення змінної highTemperatures - це об'єкт
+// // Оголошена змінна highYesterday
+// // Значення змінної highYesterday - це число 28
+// // Оголошена змінна highToday
+// // Значення змінної highToday - це число 26
+// // Оголошена змінна highTomorrow
+// // Значення змінної highTomorrow - це число 33
+// // Оголошена змінна highIcon
+// // Значення змінної highIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+// // Використовується деструктуризація об'єкта
+
 // !
+// // Виконай рефакторинг циклу for...of таким чином, щоб в ньому використовувалася деструктуризація об'єкта.
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// // for (const color of colors) {
+// //   hexColors.push(color.hex);
+// //   rgbColors.push(color.rgb);
+// // }
+
+// for (const { hex, rgb } of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// // Оголошена змінна colors
+// // Значення змінної colors - це масив
+// // Оголошена змінна hexColors
+// // Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
+// // Оголошена змінна rgbColors
+// // Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
+// // Для перебирання масиву використовується цикл for...of
+// // В циклі for...of використовується деструктуризація об'єкта
+
 // !
+// // Ми отримали прогноз погоди на два дні, з мінімальними і максимальними температурами,
+// // а також необов'язковими іконками.
+// // Заміни оголошення всіх змінних однією операцією деструктуризації властивостей об'єкта forecast.
+// // Задай значення за замовчуванням для іконок,
+// // змінних todayIcon і tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+
+// // const highToday = forecast.today.high;
+// // const lowToday = forecast.today.low;
+// // const todayIcon = forecast.today.icon;
+
+// // const highTomorrow = forecast.tomorrow.high;
+// // const lowTomorrow = forecast.tomorrow.low;
+// // const tomorrowIcon = forecast.tomorrow.icon;
+
+// const {
+//   today: {
+//     high: highToday,
+//     low: lowToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+//   tomorrow: {
+//     high: highTomorrow,
+//     low: lowTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
+// console.log();
+
+// // Оголошена змінна forecast
+// // Значення змінної forecast - це об'єкт
+// // Оголошена змінна highToday за допомогою деструктуризації
+// // Значення змінної highToday - це число 32
+// // Оголошена змінна lowToday за допомогою деструктуризації
+// // Значення змінної lowToday - це число 28
+// // Оголошена змінна todayIcon за допомогою деструктуризації
+// // Значення змінної todayIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg"
+// // Оголошена змінна highTomorrow за допомогою деструктуризації
+// // Значення змінної highTomorrow - це число 31
+// // Оголошена змінна lowTomorrow за допомогою деструктуризації
+// // Значення змінної lowTomorrow - це число 27
+// // Оголошена змінна tomorrowIcon за допомогою деструктуризації
+// // Значення змінної tomorrowIcon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+// // Використовується синтаксис деструктуризації об'єкта highTemperatures
+
 // !
+
 // !
 // !
 // !
