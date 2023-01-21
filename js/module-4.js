@@ -551,7 +551,7 @@
 // // Функція повернула новий масив зі зміненими даними
 // console.log(doubledNumbers); // [2, 4, 6, 8, 10]
 
-// !
+// ! 13
 // // Функція changeEven(numbers, value) приймає масив чисел numbers
 // // і оновлює кожен елемент, значення якого - це парне число,
 // // додаючи до нього значення параметра value.
@@ -1049,14 +1049,10 @@ const MIN_RATING = 8;
 const AUTHOR = 'Bernard Cornwell';
 // Change code below this line
 
-const topRatedBooks = books.filter(item => item.rating >= MIN_RATING);
-//   console.log(item.rating >= MIN_RATING),
-
+const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
 console.log(topRatedBooks);
 
-const booksByAuthor = books.filter(
-  (item, index, books) => books.indexOf(item) === index,
-);
+const booksByAuthor = books;
 console.log(booksByAuthor);
 
 // Оголошена змінна books
