@@ -1402,10 +1402,563 @@
 // console.log(`${modifiedHours}: ${minutes}`);
 
 // ! 25
-// Доповни функцію getFriends(users) таким чином,
-// щоб вона повертала масив друзів всіх користувачів (властивість friends).
-// У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+// // Доповни функцію getFriends(users) таким чином,
+// // щоб вона повертала масив друзів всіх користувачів (властивість friends).
+// // У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
 
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
+// // Change code below this line
+// const getFriends = users => {
+//   const newArray = users.flatMap(user => user.friends);
+//   console.log(newArray);
+//   const filteredArray = [];
+//   for (const item of newArray) {
+//     // console.log(item);
+//     if (!filteredArray.includes(item)) {
+//       filteredArray.push(item);
+//     }
+//   }
+//   console.log(filteredArray);
+//   return filteredArray;
+// };
+// // Change code above this line
+
+// // Оголошена змінна getFriends
+// // Змінній getFriends присвоєна стрілочна функція з параметром (users)
+// console.log(getFriends(users));
+// // Виклик функції із зазначеним масивом користувачів повертає масив
+// // ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner",
+// // "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// !
+// const students = [
+//   { name: 'Манго', courses: ['математика', 'фізика'] },
+//   { name: 'Полі', courses: ['інформатика', 'математика'] },
+//   { name: 'Ківі', courses: ['фізика', 'біологія'] },
+// ];
+
+// const allCourses = students.flatMap(student => student.courses);
+// // ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія'];
+// console.log(allCourses);
+
+// const uniqueCourses = allCourses.filter(
+//   (course, index, array) => array.indexOf(course) === index,
+// );
+// console.log(uniqueCourses);
+
+// ! 26
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+// // Доповни функцію getActiveUsers(users) таким чином,
+// // щоб вона повертала масив активних користувачів, значення властивості isActive яких - true.
+
+// // Change code below this line
+// const getActiveUsers = users => {
+//   return users.filter(user => user.isActive === true);
+// };
+// // Change code above this line
+
+// // Оголошена змінна getActiveUsers Змінній getActiveUsers присвоєна стрілочна функція з параметром users
+// // Для перебирання параметра users використовується метод filter()
+// // Виклик функції із зазначеним масивом користувачів повертає масив об'єктів користувачів з іменами
+// // Sharlene Bush, Elma Head, Carey Barr і Sheree Anthony
+// console.log(getActiveUsers(users));
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! 27
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
+// // Доповни функцію getInactiveUsers(users) таким чином,
+// // щоб вона повертала масив неактивних користувачів, значення властивості isActive яких - false.
+
+// // Change code below this line
+// const getInactiveUsers = users => {
+//   return users.filter(user => user.isActive === false);
+// };
+// // Change code above this line
+
+// // Оголошена змінна getInactiveUsers.
+// // Змінній getInactiveUsers присвоєна стрілочна функція з параметром users
+// // Для перебирання параметра users використовується метод filter()
+// // Виклик функції із зазначеним масивом користувачів
+// // повертає масив об'єктів користувачів з іменами
+// // Moore Hensley, Ross Vazquez і Blackburn Dotson
+// console.log(getInactiveUsers(users));
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// !
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// console.log(colorPickerOptions.find(option => option.label === 'blue')); // { label: 'blue', color: '#2196F3' }
+// console.log(colorPickerOptions.find(option => option.label === 'pink')); // { label: 'pink', color: '#E91E63' }
+// console.log(colorPickerOptions.find(option => option.label === 'white'));
+// // undefined
+
+// ! 28
+// // Використовуючи метод find(), доповни код таким чином, щоб:
+
+// // У змінній bookWithTitle утворився об'єкт книги, назва якої (властивість title) збігається зі значенням змінної BOOK_TITLE.
+// // У змінній bookByAuthor утворився об'єкт книги, автор якої (властивість author) збігається зі значенням змінної AUTHOR.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// // Change code below this line
+
+// const bookWithTitle = books.find(item => item.title === BOOK_TITLE);
+// console.log(bookWithTitle);
+
+// const bookByAuthor = books.find(item => item.author === AUTHOR);
+// console.log(bookByAuthor);
+
+// // Оголошена змінна books
+// // Значення змінної books - це масив
+// // Оголошена змінна BOOK_TITLE
+// // Значення змінної BOOK_TITLE - це рядок "The Dream of a Ridiculous Man"
+// // Оголошена змінна AUTHOR
+// // Значення змінної AUTHOR - це рядок "Robert Sheckley"
+// // Оголошена змінна bookWithTitle
+// // Значення змінної bookWithTitle - це об'єкт книги з назвою вище "The Dream of a Ridiculous Man"
+// // Оголошена змінна bookByAuthor
+// // Значення змінної bookByAuthor - це об'єкт книги автора "Robert Sheckley"
+// // Для перебирання масиву books використаний метод find()
+
+// ! 29
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Доповни функцію getUserWithEmail(users, email) таким чином,
+// // щоб вона повертала об'єкт користувача,
+// // пошта якого (властивість email) збігається зі значенням параметра email.
+
+// // Change code below this line
+// const getUserWithEmail = (users, email) => {
+//   return users.find(user => user.email === email);
+// };
+// // Change code above this line
+
+// // Оголошена функція getUserWithEmail(users, email)
+// // Для перебирання параметра users використовується метод find()
+// // Якщо значення параметра email - це "shereeanthony@kog.com",
+// // функція повертає об'єкт користувача з ім'ям Sheree Anthony
+// console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+// // Якщо значення параметра email - це "elmahead@omatom.com",
+// // функція повертає об'єкт користувача з ім'ям Elma Head
+// console.log(getUserWithEmail(users, 'elmahead@omatom.com'));
+// // Якщо значення параметра email - це "blackburndotson@furnigeer.com",
+// // функція повертає об'єкт користувача з ім'ям Blackburn Dotson
+// console.log(getUserWithEmail(users, 'blackburndotson@furnigeer.com'));
+// // Якщо в масиві users відсутній користувач з поштою із параметра email, функція повертає undefined
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// !
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
+
+// console.log(colorPickerOptions.findIndex(option => option.label === 'blue')); // 2
+// console.log(colorPickerOptions.findIndex(option => option.label === 'pink')); // 3
+// console.log(colorPickerOptions.findIndex(option => option.label === 'white')); // -1
+
+// ! Метод every()
+// // Усі елементи більші або дорівнюють нулю? - так
+// [1, 2, 3, 4, 5].every(value => value >= 0); // true
+// console.log([1, 2, 3, 4, 5].every(value => value >= 0));
+
+// // Усі елементи більші або дорівнюють нулю? - ні
+// [1, 2, 3, -10, 4, 5].every(value => value >= 0); // false
+// console.log([1, 2, 3, -10, 4, 5].every(value => value >= 0));
+
+// ! Метод some()
+// // Чи є хоча б один елемент, що більший або дорівнює нулю? - так
+// [1, 2, 3, 4, 5].some(value => value >= 0); // true
+// console.log([1, 2, 3, 4, 5].some(value => value >= 0));
+
+// // Чи є хоча б один елемент, що більший або дорівнює нулю? - так
+// [-7, -20, 3, -10, -14].some(value => value >= 0); // true
+// console.log([-7, -20, 3, -10, -14].some(value => value >= 0));
+
+// // Чи є хоча б один елемент, що менший нуля? - ні
+// [1, 2, 3, 4, 5].some(value => value < 0); // false
+// console.log([1, 2, 3, 4, 5].some(value => value < 0));
+
+// // Чи є хоча б один елемент, що менший нуля? - так
+// [1, 2, 3, -10, 4, 5].some(value => value < 0); // true
+// console.log([1, 2, 3, -10, 4, 5].some(value => value < 0));
+
+// !
+// const fruits = [
+//   { name: 'apples', amount: 100 },
+//   { name: 'bananas', amount: 0 },
+//   { name: 'grapes', amount: 50 },
+// ];
+
+// // every поверне true тільки, якщо усіх фруктів буде більше 0 штук
+// const allAvailable = fruits.every(fruit => fruit.amount > 0); // false
+// console.log(allAvailable);
+
+// // some поверне true, якщо хоча б одного фрукту буде більше 0 штук
+// const anyAvailable = fruits.some(fruits => fruits.amount > 0); // true
+// console.log(anyAvailable);
+
+// ! 30
+// // Використовуючи метод every(), доповни код таким чином, щоб:
+
+// // У змінній eachElementInFirstIsEven був результат перевірки всіх елементів масиву firstArray на парність.
+// // У змінній eachElementInFirstIsOdd був результат перевірки всіх елементів масиву firstArray на непарність.
+// // У змінній eachElementInSecondIsEven був результат перевірки всіх елементів масиву secondArray на парність.
+// // У змінній eachElementInSecondIsOdd був результат перевірки всіх елементів масиву secondArray на непарність.
+// // У змінній eachElementInThirdIsEven був результат перевірки всіх елементів масиву thirdArray на парність.
+// // У змінній eachElementInThirdIsOdd був результат перевірки всіх елементів масиву thirdArray на непарність.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(item => item % 2 === 0);
+// console.log(eachElementInFirstIsEven);
+
+// const eachElementInFirstIsOdd = firstArray.every(item => item % 2 !== 0);
+// console.log(eachElementInFirstIsOdd);
+
+// const eachElementInSecondIsEven = secondArray.every(item => item % 2 === 0);
+// console.log(eachElementInSecondIsEven);
+
+// const eachElementInSecondIsOdd = secondArray.every(item => item % 2 !== 0);
+// console.log(eachElementInSecondIsOdd);
+
+// const eachElementInThirdIsEven = thirdArray.every(item => item % 2 === 0);
+// console.log(eachElementInThirdIsEven);
+
+// const eachElementInThirdIsOdd = thirdArray.every(item => item % 2 !== 0);
+// console.log(eachElementInThirdIsOdd);
+
+// // Оголошена змінна firstArray
+// // Значення змінної firstArray - це масив [26, 94, 36, 18]
+// // Оголошена змінна secondArray
+// // Значення змінної secondArray - це масив [17, 61, 23]
+// // Оголошена змінна thirdArray
+// // Значення змінної thirdArray - це масив [17, 26, 94, 61, 36, 23, 18]
+// // Оголошена змінна eachElementInFirstIsEven
+// // Значення змінної eachElementInFirstIsEven - це буль true
+// // Оголошена змінна eachElementInFirstIsOdd
+// // Значення змінної eachElementInFirstIsOdd - це буль false
+// // Оголошена змінна eachElementInSecondIsEven
+// // Значення змінної eachElementInSecondIsEven - це буль false
+// // Оголошена змінна eachElementInSecondIsOdd
+// // Значення змінної eachElementInSecondIsOdd - це буль true
+// // Оголошена змінна eachElementInThirdIsEven
+// // Значення змінної eachElementInThirdIsEven - це буль false
+// // Оголошена змінна eachElementInThirdIsOdd
+// // Значення змінної eachElementInThirdIsOdd - це буль false
+// // Для перебирання масивів використаний метод every()
+
+// ! 31
 const users = [
   {
     name: 'Moore Hensley',
@@ -1415,7 +1968,6 @@ const users = [
     isActive: false,
     balance: 2811,
     gender: 'male',
-    age: 37,
   },
   {
     name: 'Sharlene Bush',
@@ -1425,7 +1977,6 @@ const users = [
     isActive: true,
     balance: 3821,
     gender: 'female',
-    age: 34,
   },
   {
     name: 'Ross Vazquez',
@@ -1435,7 +1986,6 @@ const users = [
     isActive: false,
     balance: 3793,
     gender: 'male',
-    age: 24,
   },
   {
     name: 'Elma Head',
@@ -1445,7 +1995,6 @@ const users = [
     isActive: true,
     balance: 2278,
     gender: 'female',
-    age: 21,
   },
   {
     name: 'Carey Barr',
@@ -1455,7 +2004,6 @@ const users = [
     isActive: true,
     balance: 3951,
     gender: 'male',
-    age: 27,
   },
   {
     name: 'Blackburn Dotson',
@@ -1465,7 +2013,6 @@ const users = [
     isActive: false,
     balance: 1498,
     gender: 'male',
-    age: 38,
   },
   {
     name: 'Sheree Anthony',
@@ -1475,57 +2022,672 @@ const users = [
     isActive: true,
     balance: 2764,
     gender: 'female',
-    age: 39,
   },
 ];
 
+// // Доповни функцію isEveryUserActive(users) таким чином,
+// // щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
+
+// // Change code below this line
+// const isEveryUserActive = users => {
+//   return users.every(item => item.isActive === true);
+// };
+// // Change code above this line
+
+// // Оголошена змінна isEveryUserActive
+// // Змінній isEveryUserActive присвоєна стрілочна функція з параметром (users)
+// // Для перебирання параметра users використовується метод every()
+// // Виклик функції із зазначеним масивом користувачів повертає false
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! 32
+// // Використовуючи метод some(), доповни код таким чином, щоб:
+
+// // У змінній anyElementInFirstIsEven був результат перевірки наявності парних елементів в масиві firstArray.
+// // У змінній anyElementInFirstIsOdd був результат перевірки наявності непарних елементів в масиві firstArray.
+// // У змінній anyElementInSecondIsEven був результат перевірки наявності парних елементів в масиві secondArray.
+// // У змінній anyElementInSecondIsOdd був результат перевірки наявності непарних елементів в масиві secondArray.
+// // У змінній anyElementInThirdIsEven був результат перевірки наявності парних елементів в масиві thirdArray.
+// // У змінній anyElementInThirdIsOdd був результат перевірки наявності непарних елементів в масиві thirdArray.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some(item => item % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(item => item % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(item => item % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(item => item % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(item => item % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(item => item % 2 !== 0);
+
+// // Оголошена змінна firstArray
+// // Значення змінної firstArray - це масив [26, 94, 36, 18]
+// // Оголошена змінна secondArray
+// // Значення змінної secondArray - це масив [17, 61, 23]
+// // Оголошена змінна thirdArray
+// // Значення змінної thirdArray - це масив [17, 26, 94, 61, 36, 23, 18]
+// // Оголошена змінна anyElementInFirstIsEven
+// // Значення змінної anyElementInFirstIsEven - це буль true
+// // Оголошена змінна anyElementInFirstIsOdd
+// // Значення змінної anyElementInFirstIsOdd - це буль false
+// // Оголошена змінна anyElementInSecondIsEven
+// // Значення змінної anyElementInSecondIsEven - це буль false
+// // Оголошена змінна anyElementInSecondIsOdd
+// // Значення змінної anyElementInSecondIsOdd - це буль true
+// // Оголошена змінна anyElementInThirdIsEven
+// // Значення змінної anyElementInThirdIsEven - це буль true
+// // Оголошена змінна anyElementInThirdIsOdd
+// // Значення змінної anyElementInThirdIsOdd - це буль true
+// // Для перебирання масивів використаний метод some()
+
+// ! 33
+// // Доповни функцію isAnyUserActive(users) таким чином,
+// // щоб вона перевіряла наявність активних користувачів (властивість isActive) і повертала true або false.
+
+// // Change code below this line
+// const isAnyUserActive = users => {
+//   return users.some(item => item.isActive);
+// };
+// // Change code above this line
+
+// // Оголошена функція isAnyUserActive(users)
+// // Для перебирання параметра users використовується метод some()
+// // Виклик функції із зазначеним масивом користувачів повертає true
+// console.log(isAnyUserActive(users));
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! Метод reduce()
+// const total = [2, 7, 3, 14, 6].reduce((previousValue, number) => {
+//   //   console.log(number);
+//   //   console.log(previousValue);
+//   return previousValue + number;
+// }, 0);
+
+// console.log(total); // 32
+
+// ! Метод reduce()
+// const students = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+//   { name: "Х'юстон", score: 64 },
+// ];
+
+// // Назва акумулятора може бути довільною, це просто параметр функції
+// const totalScore = students.reduce((total, student) => {
+//   return total + student.score;
+// }, 0);
+
+// const averageScore = totalScore / students.length;
+// console.log(averageScore);
+
+// ! Метод reduce()
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // Пройдемо по всіх елементах колекції і додамо значення властивості likes
+// // до акумулятора, початкове значення якого вкажемо 0.
+// const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+
+// console.log(likes); // 32
+
+// // Мабуть, підрахунок лайків - не одиночна операція, тому напишемо функцію
+// // для підрахунку лайків з колекції
+// const countLikes = tweets => {
+//   return tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// };
+
+// console.log(countLikes(tweets)); // 32
+
+// ! Метод reduce()
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // Пройдемо по всіх елементах колекції і додамо значення властивості tags
+// // до акумулятора, початкове значення якого вкажемо порожнім масивом [].
+// // На кожній ітерації пушимо в акумулятор усі елементи tweet.tags і повертаємо його.
+// const tags = tweets.reduce((allTags, tweet) => {
+//   allTags.push(...tweet.tags);
+
+//   return allTags;
+// }, []);
+
+// console.log(tags);
+
+// // Мабуть, збирання тегів - не одиночна операція, тому напишемо функцію
+// // для збирання тегів з колекції
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// console.log(getTags(tweets));
+
+// ! Метод reduce()
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// const tags = getTags(tweets);
+// console.log(tags);
+
+// // Винесемо callback-функцію окремо, а в reducе передамо посилання на неї.
+// // Це стандартна практика, якщо callback-функція досить велика.
+
+// // Якщо в об'єкті-акумуляторі acc відсутня своя властивість з ключем tag,
+// // то створюємо її і записуємо їй значення 0.
+// // В іншому випадку збільшуємо значення на 1.
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+
+//   acc[tag] += 1;
+
+//   return acc;
+// };
+
+// // Початкове значення акумулятора - це порожній об'єкт {}
+// const countTags = tags => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+// ! 34
+// // Ігровому сервісу необхідний функціонал підрахунку середнього часу,
+// // проведеного в іграх. Доповни код таким чином,
+// // щоб у змінній totalPlayTime вийшло загальний ігровий час з масиву playtimes.
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((total, item) => (total += item), 0);
+
+// console.log(totalPlayTime);
+
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(averagePlayTime);
+
+// // Оголошена змінна players
+// // Значення змінної players - це об'єкт гравців з ігровим часом кожного
+// // Оголошена змінна playtimes
+// // Значення змінної playtimes - це масив [1270, 468, 710, 244]
+// // Оголошена змінна totalPlayTime
+// // Значення змінної totalPlayTime - це число 2692
+// // Для перебирання масиву playtimes використовується метод reduce()
+// // Оголошена змінна averagePlayTime
+// // Значення змінної averagePlayTime - це число 673
+
+// ! 35
+// // // Нашому сервісу необхідно розрахувати середній час,
+// // // проведений в одній грі для кожного гравця,
+// // // і отримати загальну суму цих значень часу.
+// // // Розрахувати час для кожного з гравців можна,
+// // // розділивши його час (властивість playtime) на кількість ігор (властивість gamesPlayed).
+
+// // const players = [
+// //   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+// //   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+// //   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+// //   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// // ];
+// // // Change code below this line
+
+// // const totalAveragePlaytimePerGame = players.reduce((total, item) => {
+// //   return total + item.playtime / item.gamesPlayed;
+// // }, 0);
+// // console.log(totalAveragePlaytimePerGame);
+
+// // // Оголошена змінна players
+// // // Значення змінної players - це масив об'єктів гравців
+// // // Оголошена змінна totalAveragePlaytimePerGame
+// // // Значення змінної totalAveragePlaytimePerGame - це число 1023
+// // // Для перебирання масиву players використовується метод reduce()
+
+// ! 36
+// // Доповни функцію calculateTotalBalance(users) таким чином,
+// // щоб вона рахувала і повертала суму всіх коштів (властивість balance),
+// // які зберігають користувачі з масиву users.
+
+// // Change code below this line
+// const calculateTotalBalance = users => {
+//   return users.reduce((total, item) => {
+//     return total + item.balance;
+//   }, 0);
+// };
+// // Change code above this line
+
+// // Оголошена змінна calculateTotalBalance
+// // Змінній calculateTotalBalance присвоєна стрілочна функція з параметром (users)
+// // Для перебирання параметра users використовується метод reduce()
+// // Виклик функції із зазначеним масивом користувачів повертає число 20916
+// console.log(calculateTotalBalance(users));
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! 37
+// // Доповни функцію getTotalFriendCount(users) таким чином,
+// // щоб вона рахувала і повертала загальну кількість друзів (властивість friends) усіх користувачів з масиву users.
+
+// // Change code below this line
+// const getTotalFriendCount = users => {
+//   return users.reduce((allFriends, friend) => {
+//     allFriends.push(...friend.friends);
+
+//     return allFriends;
+//   }, []).length;
+
+//   //   const addArray = arr => {
+//   //     users.reduce((allFriends, friend) => {
+//   //       allFriends.push(...friend.friends);
+
+//   //       return allFriends;
+//   //     }, []);
+//   //   };
+//   //   addArray(users);
+// };
+// // Change code above this line
+
+// // Оголошена змінна getTotalFriendCount
+// // Змінній getTotalFriendCount присвоєна стрілочна функція з параметром (users)
+// // Для перебирання параметра users використовується метод reduce()
+// // Виклик функції із зазначеним масивом користувачів повертає число 14
+// console.log(getTotalFriendCount(users));
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! Метод sort()
+// const scores = [61, 19, 74, 35, 92, 56];
+// scores.sort();
+// console.log(scores); // [19, 35, 56, 61, 74, 92]
+
+// const scores2 = [27, 2, 41, 4, 7, 3, 75];
+// scores2.sort();
+// console.log(scores2); // [2, 27, 3, 4, 41, 7, 75]
+
+// const students = ['Віка', 'Андрій', 'Олег', 'Юля', 'Борис', 'Катя'];
+// students.sort();
+// console.log(students); // [ 'Андрій', 'Борис', 'Віка', 'Катя', 'Олег', 'Юля' ]
+
+// const letters = ['b', 'B', 'a', 'A', 'c', 'C'];
+// letters.sort();
+// console.log(letters); // ['A', 'B', 'C', 'a', 'b', 'c']
+
+// const scoresMain = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scoresMain].sort();
+// console.log(scoresMain); // [61, 19, 74, 35, 92, 56]
+// console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+
+// // Свій порядок сортування чисел
+// const scores3 = [61, 19, 74, 35, 92, 56];
+// console.log(scores3);
+// console.log([...scores3].sort((a, b) => a - b));
+// console.log([...scores3].sort((a, b) => b - a));
+
+// // Свій порядок сортування рядків
+// const students2 = ['Віка', 'Андрій', 'Олег', 'Юля', 'Борис', 'Катя'];
+
+// const inAlphabetOrder = [...students2].sort((a, b) => a.localeCompare(b));
+// console.log(inAlphabetOrder); // ['Андрій', 'Борис', 'Віка', 'Катя', 'Олег', 'Юля']
+
+// const inReversedOrder = [...students2].sort((a, b) => b.localeCompare(a));
+// console.log(inReversedOrder); // ['Юля', 'Олег', 'Катя', 'Віка', 'Борис', 'Андрій']
+
+// // Сортування об'єктів
+// const students3 = [
+//   { name: 'Манго', score: 83 },
+//   { name: 'Полі', score: 59 },
+//   { name: 'Аякс', score: 37 },
+//   { name: 'Ківі', score: 94 },
+// ];
+// console.log(students3);
+
+// const inAscendingScoreOrder = students3.sort(
+//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score,
+// );
+// console.log(inAscendingScoreOrder);
+
+// const inDescendingScoreOrder = students3.sort(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score,
+// );
+// console.log(inDescendingScoreOrder);
+
+// const inAlphabeticalOrder = students3.sort((firstStudent, secondStudent) =>
+//   firstStudent.name.localeCompare(secondStudent.name),
+// );
+// console.log(inAlphabeticalOrder);
+
+// ! Ланцюжки методів
+// const students = [
+//   { name: 'Манго', score: 83, courses: ['математика', 'фізика'] },
+//   { name: 'Полі', score: 59, courses: ['інформатика', 'математика'] },
+//   { name: 'Аякс', score: 37, courses: ['фізика', 'біологія'] },
+//   { name: 'Ківі', score: 94, courses: ['література', 'інформатика'] },
+// ];
+
+// // const sortedByAscendingScore = [...students].sort((a, b) => a.score - b.score);
+// // const names = sortedByAscendingScore.map(student => student.name);
+
+// // console.log(names); // ['Аякс', 'Полі', 'Манго', 'Ківі']
+
+// const names = [...students]
+//   .sort((a, b) => a.score - b.score)
+//   .map(student => student.name);
+
+// console.log(names); // ['Аякс', 'Полі', 'Манго', 'Ківі']
+
+// const uniqueSortedCourses = students
+//   .flatMap(student => student.courses)
+//   .filter((course, index, array) => array.indexOf(course) === index)
+//   .sort((a, b) => a.localeCompare(b));
+
+// console.log(uniqueSortedCourses); // ['біологія', 'інформатика', 'література', 'математика', 'фізика']
+
+// ! 38
+// // Доповни код таким чином,
+// // щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates,
+// // відсортована за зростанням,
+// // а у змінній alphabeticalAuthors - копія масиву імен авторів authors, відсортована за алфавітом.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   'Tanith Lee',
+//   'Bernard Cornwell',
+//   'Robert Sheckley',
+//   'Fyodor Dostoevsky',
+// ];
+// // Change code below this line
+// console.log(releaseDates);
+// console.log(authors);
+
+// // const ascendingReleaseDates = releaseDates.sort((a, b) => a - b);
+// const ascendingReleaseDates = [...releaseDates].sort();
+// console.log(ascendingReleaseDates);
+// console.log(releaseDates);
+
+// // const alphabeticalAuthors = authors.sort((a, b) => a.localeCompare(b));
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(alphabeticalAuthors);
+// console.log(authors);
+
+// // Оголошена змінна releaseDates
+// // Значення змінної releaseDates - це масив [2016, 1967, 2008, 1984, 1973, 2012, 1997]
+// // Оголошена змінна authors
+// // Значення змінної authors - це масив ["Tanith Lee", "Bernard Cornwell", "Robert Sheckley", "Fyodor Dostoevsky"]
+// // Оголошена змінна ascendingReleaseDates
+// // Значення змінної ascendingReleaseDates - це масив [1967, 1973, 1984, 1997, 2008, 2012, 2016]
+// // Оголошена змінна alphabeticalAuthors
+// // Значення змінної alphabeticalAuthors - це масив ["Bernard Cornwell", "Tanith Lee", "Robert Sheckley", "Fyodor Dostoevsky"]
+// // Використаний метод sort()
+
+// ! 39
+// // Онлайн бібіліотеці необхідно відображати книги,
+// // відсортовані за датою видання, за її зростанням або спаданням.
+// // Доповни код таким чином,
+// // щоб у змінній ascendingReleaseDates вийшла копія масиву releaseDates,
+// // відсортована за зростанням, а у змінній descendingReleaseDates - копія, відсортована за спаданням.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+// console.log(ascendingReleaseDates);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+// console.log(descendingReleaseDates);
+
+// // Оголошена змінна releaseDates
+// // Значення змінної releaseDates - це масив [2016, 1967, 2008, 1984, 1973, 2012, 1997]
+// // Оголошена змінна ascendingReleaseDates
+// // Значення змінної ascendingReleaseDates - це масив [1967, 1973, 1984, 1997, 2008, 2012, 2016]
+// // Оголошена змінна descendingReleaseDates
+// // Значення змінної descendingReleaseDates - це масив [2016, 2012, 2008, 1997, 1984, 1973, 1967]
+// // Використаний метод sort()
+
+// ! 40
+// // Онлайн бібіліотеці необхідно відображати книги,
+// // відсортовані за автором, в алфавітному і зворотному алфавітному порядку.
+// // Доповни код таким чином,
+// // щоб у змінній authorsInAlphabetOrder вийшла копія масиву authors,
+// // відсортована за алфавітом, а у змінній authorsInReversedOrder - копія,
+// // відсортована у зворотному алфавітному порядку.
+
+// const authors = [
+//   'Tanith Lee',
+//   'Bernard Cornwell',
+//   'Robert Sheckley',
+//   'Fyodor Dostoevsky',
+//   'Howard Lovecraft',
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// // Оголошена змінна authors
+// // Значення змінної authors - це масив ["Tanith Lee", "Bernard Cornwell", "Robert Sheckley", "Fyodor Dostoevsky", "Howard Lovecraft"]
+// // Оголошена змінна authorsInAlphabetOrder
+// // Значення змінної authorsInAlphabetOrder - це масив ["Bernard Cornwell", "Fyodor Dostoevsky", "Howard Lovecraft", "Robert Sheckley", "Tanith Lee"]
+// // Оголошена змінна authorsInReversedOrder
+// // Значення змінної authorsInReversedOrder - це масив ["Tanith Lee", "Robert Sheckley", "Howard Lovecraft", "Fyodor Dostoevsky", "Bernard Cornwell"]
+// // Використаний метод sort()
+
+// ! 41
+// // Доповни код таким чином, щоб:
+
+// // У змінній sortedByAuthorName вийшов масив книг, відсортований за ім'ям автора в алфавітному порядку.
+// // У змінній sortedByReversedAuthorName вийшов масив книг, відсортований за ім'ям автора у зворотному алфавітному порядку.
+// // У змінній sortedByAscendingRating вийшов масив книг, відсортований за зростанням рейтингу.
+// // У змінній sortedByDescentingRating вийшов масив книг, відсортований за спаданням рейтингу.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
+// // Change code below this line
+// console.table(books);
+
+// const sortedByAuthorName = [...books].sort((firstAuthor, secondAuthor) =>
+//   firstAuthor.author.localeCompare(secondAuthor.author),
+// );
+// console.table(sortedByAuthorName);
+
+// const sortedByReversedAuthorName = [...books].sort(
+//   (firstAuthor, secondAuthor) =>
+//     secondAuthor.author.localeCompare(firstAuthor.author),
+// );
+// console.table(sortedByReversedAuthorName);
+
+// const sortedByAscendingRating = [...books].sort(
+//   (firstRating, secondRating) => firstRating.rating - secondRating.rating,
+// );
+// console.table(sortedByAscendingRating);
+
+// const sortedByDescentingRating = [...books].sort(
+//   (firstRating, secondRating) => secondRating.rating - firstRating.rating,
+// );
+// console.table(sortedByDescentingRating);
+
+// // Оголошена змінна books
+// // Значення змінної books - це вихідний масив об'єктів книг
+// // Оголошена змінна sortedByAuthorName
+// // Значення змінної sortedByAuthorName - це масив книг, відсортований за ім'ям автора в алфавітному порядку
+// // Оголошена змінна sortedByReversedAuthorName
+// // Значення змінної sortedByReversedAuthorName - це масив книг, відсортований за ім'ям автора у зворотному алфавітному порядку
+// // Оголошена змінна sortedByAscendingRating
+// // Значення змінної sortedByAscendingRating - це масив книг, відсортований за зростанням рейтингу
+// // Оголошена змінна sortedByDescentingRating
+// // Значення змінної sortedByDescentingRating - це масив книг, відсортований за спаданням рейтингу
+// // Для перебирання масиву books використовується метод sort()
+
+// ! 42
+// // Доповни функцію sortByAscendingBalance(users) таким чином,
+// // щоб вона повертала масив користувачів, відсортований за зростанням їх балансу (властивість balance).
+
+// // Change code below this line
+// const sortByAscendingBalance = users => {
+//   return [...users].sort((a, b) => a.balance - b.balance);
+// };
+// // Change code above this line
+
+// // Оголошена змінна sortByAscendingBalance
+// // Змінній sortByAscendingBalance присвоєна стрілочна функція з параметром (users)
+// // Значення параметра users не змінюється
+// // Виклик функції із зазначеним масивом користувачів
+// // повертає новий масив користувачів, відсортований за зростанням їх балансу
+// console.log(sortByAscendingBalance(users));
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+// // Для перебирання параметра users використаний метод sort()
+
+// // const users = [
+// //     {
+// //       name: 'Moore Hensley',
+// //       email: 'moorehensley@indexia.com',
+// //       eyeColor: 'blue',
+// //       friends: ['Sharron Pace'],
+// //       isActive: false,
+// //       balance: 2811,
+// //       gender: 'male',
+// //     },
+
+// ! 43
+// // Доповни функцію sortByDescendingFriendCount(users) таким чином,
+// // щоб вона повертала масив користувачів,
+// // відсортований за спаданням кількості їхніх друзів (властивість friends).
+
+// // Change code below this line
+// const sortByDescendingFriendCount = users => {
+//   return [...users].sort((a, b) => b.friends.length - a.friends.length);
+// };
+// // Change code above this line
+
+// // Оголошена змінна sortByDescendingFriendCount
+// // Змінній sortByDescendingFriendCount присвоєна стрілочна функція з параметром (users)
+// // Значення параметра users не змінюється
+// // Для перебирання параметра users використаний метод sort()
+// // Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів,
+// // відсортований за спаданням кількості їхніх друзів
+// console.log(sortByDescendingFriendCount(users));
+// console.table(sortByDescendingFriendCount(users));
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! 44
+// // Доповни функцію sortByName(users) таким чином,
+// // щоб вона повертала масив користувачів,
+// // відсортований за їх ім'ям (властивість name) в алфавітному порядку.
+
+// // Change code below this line
+// const sortByName = users => {
+//   return [...users].sort((a, b) => a.name.localeCompare(b.name));
+// };
+// // Change code above this line
+
+// // Оголошена змінна sortByName
+// // Змінній sortByName присвоєна стрілочна функція з параметром (users)
+// // Значення параметра users не змінюється
+// // Для перебирання параметра users використаний метод sort()
+// // Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів,
+// // відсортований за ім'ям в алфавітному порядку
+// console.log(sortByName(users));
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// ! 45
+// Доповни код таким чином,
+// щоб у змінній names вийшов масив імен авторів в алфавітному порядку,
+// рейтинг книг яких більший за значення змінної MIN_BOOK_RATING.
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  {
+    title: 'The Dreams in the Witch House',
+    author: 'Howard Lovecraft',
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
 // Change code below this line
-const getFriends = users => {
-  return users.filter(user => user.friends);
-};
-// Change code above this line
 
-// Оголошена змінна getFriends
-// Змінній getFriends присвоєна стрілочна функція з параметром (users)
-console.log(getFriends(users));
-// Виклик функції із зазначеним масивом користувачів повертає масив
-// ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner",
-// "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
-// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+const names = books;
 
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
-// !
+// Оголошена змінна books
+// Значення змінної books - це вихідний масив об'єктів
+// Оголошена змінна MIN_BOOK_RATING
+// Значення змінної MIN_BOOK_RATING - це число 8
+// Оголошена змінна names
+// Значення змінної names - це масив ["Bernard Cornwell", "Howard Lovecraft", "Robert Sheckley"]
+// Відсутні оголошені змінні, крім books, MIN_BOOK_RATING і names
+// Використовується ланцюжок методів filter, map, sort
+
 // !
 // !
 // !
