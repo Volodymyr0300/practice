@@ -828,3 +828,117 @@
 //   return num * 2;
 // }
 // console.log(squareDigits(10));
+
+// !
+// // 2 -> 3 (1 + 2)
+// // 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+// var summation = function (num) {
+//   // Code here
+//   let total = 0;
+//   for (let i = num; i > 0; i -= 1) {
+//     total += i;
+//   }
+//   return total;
+// };
+// console.log(summation(8));
+
+// !
+// // After a hard quarter in the office you decide to get some rest on a vacation.
+// // So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+// // You will need a rental car in order for you to get around in your vacation.
+// // The manager of the car rental makes you some good offers.
+
+// // Every day you rent the car costs $40. If you rent the car for 7 or more days,
+// // you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+// // Кожен день оренди автомобіля коштує 40 доларів.
+// // Якщо ви орендуєте автомобіль на 7 і більше днів, ви отримуєте знижку 50 доларів США.
+// // Крім того, якщо ви орендуєте автомобіль на 3 або більше днів, ви отримуєте 20 доларів США від загальної суми.
+
+// // Write a code that gives out the total amount for different days(d).
+// function rentalCarCost(d) {
+//   // Your solution here
+//   let totalAmount = 0;
+//   for (let i = 1; i <= d; i += 1) {
+//     if (i < 3) {
+//       totalAmount += 40;
+//     } else if (i === 3) {
+//       totalAmount += 40;
+//       totalAmount -= 20;
+//     } else if (i > 3 && i < 7) {
+//       totalAmount += 40;
+//     } else if (i === 7) {
+//       totalAmount += 40;
+//       totalAmount -= 50;
+//     } else {
+//       totalAmount += 40;
+//     }
+//   }
+//   return totalAmount;
+// }
+// console.log(rentalCarCost(7));
+
+// !
+// // function betterThanAverage(classPoints, yourPoints) {
+// //   // Your code here
+// //   classPoints.push(yourPoints);
+// //   let result = 0;
+// //   for (const item of classPoints) {
+// //     result += item;
+// //   }
+// //   return yourPoints > result / classPoints.length ? true : false;
+// // }
+// function betterThanAverage(classPoints, yourPoints) {
+//   return (
+//     yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length
+//   );
+// }
+// console.log(betterThanAverage([2, 3], 5));
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+
+// !
+// // var min = function (list) {
+// //   let minNum;
+// //   for (const i of list) {
+// //     if (i === list[0]) {
+// //       minNum = i;
+// //     } else if (minNum < i) {
+// //       continue;
+// //     } else {
+// //       minNum = i;
+// //     }
+// //   }
+// //   return minNum;
+// // };
+
+// // var max = function (list) {
+// //   let maxNum;
+// //   for (const i of list) {
+// //     if (i === list[0]) {
+// //       maxNum = i;
+// //     } else if (maxNum > i) {
+// //       continue;
+// //     } else {
+// //       maxNum = i;
+// //     }
+// //   }
+// //   return maxNum;
+// // };
+
+// const min = list => Math.min(...list);
+// const max = list => Math.max(...list);
+
+// console.log(min([-52, 56, 30, 29, -54, 0, -110])); // -110
+
+// console.log(min([42, 54, 65, 87, 0])); // 0
+
+// console.log(max([4, 6, 2, 1, 9, 63, -134, 566])); // 566
+
+// console.log(max([5])); // 5
+
+// !
+function makeUpperCase(str) {
+  // Code here
+  return str.toUpperCase();
+}
