@@ -2286,11 +2286,9 @@
 // // які зберігають користувачі з масиву users.
 
 // // Change code below this line
-// const calculateTotalBalance = users => {
-//   return users.reduce((total, item) => {
-//     return total + item.balance;
-//   }, 0);
-// };
+// const calculateTotalBalance = users =>
+//   users.reduce((total, item) => total + item.balance, 0);
+
 // // Change code above this line
 
 // // Оголошена змінна calculateTotalBalance
