@@ -86,13 +86,47 @@
 // console.log(image.getAttribute('alt')); // Amazing nature
 
 // !
-const saveBtn = document.querySelector('.editor button[data-action="save"]');
-const closeBtn = document.querySelector('.editor button[data-action="close"]');
+// const saveBtn = document.querySelector('.editor button[data-action="save"]');
+// const closeBtn = document.querySelector('.editor button[data-action="close"]');
 
-console.log(saveBtn.dataset.action); //save
-console.log(closeBtn.dataset.action); //close
+// console.log(saveBtn.dataset.action); //save
+// console.log(closeBtn.dataset.action); //close
 
-const dishes = document.querySelectorAll('.dishes > li');
-dishes.forEach(dish => {
-  console.log(dish.dataset.id);
-});
+// const dishes = document.querySelectorAll('.dishes > li');
+// dishes.forEach(dish => {
+//   console.log(dish.dataset.id);
+// });
+
+// !
+const heading = document.createElement('h1');
+console.log(heading); // <h1></h1>
+console.dir(heading);
+
+heading.textContent = 'This is a heading';
+console.log(heading); // <h1>This is a heading</h1>
+console.dir(heading);
+
+const image = document.createElement('img');
+image.src = 'https://placeimg.com/640/480/nature';
+image.alt = 'Nature';
+console.log(image); // <img src="https://placeimg.com/640/480/nature" alt="Nature" />
+
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
+// !
