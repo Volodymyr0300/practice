@@ -112,6 +112,19 @@
 // console.log(image); // <img src="https://placeimg.com/640/480/nature" alt="Nature" />
 
 // !
+// // Напишіть функцію, яка розверає масив у зворотньому напрямку.Метод reverse() не використовувати
+// const arrNumber = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+// function arrReverse(arr) {
+//     return arr.map(
+//         (item, index, array) => array[array.length - 1 - index],
+//       )
+// }
+
+// const newArr = arrNumber.map(
+//   (item, index, array) => array[array.length - 1 - index],
+// );
+// console.log(newArr);
 
 // !
 // !
