@@ -606,6 +606,7 @@ logoTextContent2.style.boxSizing = 'inherit';
 logoLinkRef.append(logoTextContent2);
 
 document.body.append(headerRef);
+
 // !
 // !
 // !
