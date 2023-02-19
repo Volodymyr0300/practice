@@ -608,6 +608,24 @@ logoLinkRef.append(logoTextContent2);
 document.body.append(headerRef);
 
 // !
+const makeChangeColor = function () {
+  const changeColor = function (color) {
+    // this.color = color
+    console.log('changecolor -> this', this);
+  };
+
+  //   changeColor()
+  const sweat = {
+    color: 'teal',
+  };
+
+  sweat.uptadeColor = changeColor;
+  sweat.uptadeColor('red');
+
+  return sweat.uptadeColor;
+};
+makeChangeColor();
+
 // !
 // !
 // !
