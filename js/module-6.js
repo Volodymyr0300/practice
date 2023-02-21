@@ -560,71 +560,71 @@
 
 // !
 
-const headerRef = document.createElement('header');
-headerRef.classList.add('header');
-headerRef.style.borderBottom = '1px solid #ececec';
-console.log(headerRef);
+// const headerRef = document.createElement('header');
+// headerRef.classList.add('header');
+// headerRef.style.borderBottom = '1px solid #ececec';
+// console.log(headerRef);
 
-const divContainerRef = document.createElement('div');
-divContainerRef.classList.add('header-container');
-divContainerRef.classList.add('container');
-divContainerRef.style.display = 'flex';
-divContainerRef.style.width = '1200px';
-divContainerRef.style.padding = '0 15px';
-divContainerRef.style.margin = 'margin 0 auto';
-headerRef.append(divContainerRef);
+// const divContainerRef = document.createElement('div');
+// divContainerRef.classList.add('header-container');
+// divContainerRef.classList.add('container');
+// divContainerRef.style.display = 'flex';
+// divContainerRef.style.width = '1200px';
+// divContainerRef.style.padding = '0 15px';
+// divContainerRef.style.margin = 'margin 0 auto';
+// headerRef.append(divContainerRef);
 
-const navRef = document.createElement('nav');
-navRef.classList.add('header-nav');
-navRef.style.display = 'flex';
-navRef.style.flexGrow = '1';
-divContainerRef.append(navRef);
+// const navRef = document.createElement('nav');
+// navRef.classList.add('header-nav');
+// navRef.style.display = 'flex';
+// navRef.style.flexGrow = '1';
+// divContainerRef.append(navRef);
 
-const logoLinkRef = document.createElement('a');
-logoLinkRef.classList.add('header-logo');
-logoLinkRef.style.fontSize = '26px';
-logoLinkRef.style.lineHeight = '1.19';
-logoLinkRef.style.fontFamily = 'Raleway';
-logoLinkRef.style.fontSize = 'normal';
-logoLinkRef.style.fontWeight = '700';
-logoLinkRef.style.letterSpacing = '.03em';
-logoLinkRef.style.textDecoration = 'none';
-logoLinkRef.style.display = 'flex';
-logoLinkRef.style.alignItems = 'center';
-navRef.append(logoLinkRef);
+// const logoLinkRef = document.createElement('a');
+// logoLinkRef.classList.add('header-logo');
+// logoLinkRef.style.fontSize = '26px';
+// logoLinkRef.style.lineHeight = '1.19';
+// logoLinkRef.style.fontFamily = 'Raleway';
+// logoLinkRef.style.fontSize = 'normal';
+// logoLinkRef.style.fontWeight = '700';
+// logoLinkRef.style.letterSpacing = '.03em';
+// logoLinkRef.style.textDecoration = 'none';
+// logoLinkRef.style.display = 'flex';
+// logoLinkRef.style.alignItems = 'center';
+// navRef.append(logoLinkRef);
 
-const logoTextContent1 = document.createElement('span');
-logoTextContent1.classList.add('header-logo1');
-logoTextContent1.textContent = 'Web';
-logoTextContent1.style.boxSizing = 'inherit';
-logoLinkRef.append(logoTextContent1);
+// const logoTextContent1 = document.createElement('span');
+// logoTextContent1.classList.add('header-logo1');
+// logoTextContent1.textContent = 'Web';
+// logoTextContent1.style.boxSizing = 'inherit';
+// logoLinkRef.append(logoTextContent1);
 
-const logoTextContent2 = document.createElement('span');
-logoTextContent2.classList.add('header-logo2');
-logoTextContent2.textContent = 'Studio';
-logoTextContent2.style.boxSizing = 'inherit';
-logoLinkRef.append(logoTextContent2);
+// const logoTextContent2 = document.createElement('span');
+// logoTextContent2.classList.add('header-logo2');
+// logoTextContent2.textContent = 'Studio';
+// logoTextContent2.style.boxSizing = 'inherit';
+// logoLinkRef.append(logoTextContent2);
 
-document.body.append(headerRef);
+// document.body.append(headerRef);
 
 // !
-const makeChangeColor = function () {
-  const changeColor = function (color) {
-    // this.color = color
-    console.log('changecolor -> this', this);
-  };
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     // this.color = color
+//     console.log('changecolor -> this', this);
+//   };
 
-  //   changeColor()
-  const sweat = {
-    color: 'teal',
-  };
+//   //   changeColor()
+//   const sweat = {
+//     color: 'teal',
+//   };
 
-  sweat.uptadeColor = changeColor;
-  sweat.uptadeColor('red');
+//   sweat.uptadeColor = changeColor;
+//   sweat.uptadeColor('red');
 
-  return sweat.uptadeColor;
-};
-makeChangeColor();
+//   return sweat.uptadeColor;
+// };
+// makeChangeColor();
 
 // !
 // !
