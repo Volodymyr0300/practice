@@ -76,17 +76,125 @@
 // console.log(getSum(1, 2));
 
 // !
+// const dog = {
+//   name: 'Mango',
+//   age: 3,
+//   isHappy: true,
+// };
+
+// const dogJSON = JSON.stringify(dog);
+// console.log(dogJSON); // "{"name":"Mango","age":3,"isHappy":true}"
+
 // !
+// // const json = '{"name":"Mango","age":3,"isHappy":true}';
+// // const dog = JSON.parse(dog);
+
+// const dogAfter = JSON.parse(dogJSON);
+// console.log(dogAfter); // {name: "Mango", age: 3, isHappy: true}
+// console.log(dogAfter.name); // "Mango"
+
 // !
+// try {
+//   const data = JSON.parse('Well, this is awkward');
+// } catch (error) {
+//   console.log(error.name); // "SyntaxError"
+//   console.log(error.message); // Unexpected token W in JSON at position 0
+// }
+
+// console.log('✅ This is fine, we handled parse error in try...catch');
+
 // !
+// try {
+//   const data = JSON.parse('{username: "Mango"}');
+// } catch (error) {
+//   console.log(error.name); // "SyntaxError"
+//   console.log(error.message); // "Unexpected token u in JSON at position 1"
+// }
+
+// console.log('✅ This is fine, we handled parse error in try...catch');
+
 // !
+// console.log('This message will not appear in the console');
+
+// cos value = 5;
+
 // !
+// const settings = {
+//   theme: 'dark',
+//   isAuthenticated: true,
+//   options: [1, 2, 3],
+// };
+
+// localStorage.setItem('settings', JSON.stringify(settings));
+
 // !
+// localStorage.setItem('ui-theme', 'dark');
+
+// const theme = localStorage.getItem('ui-theme');
+// console.log(theme); // "dark"
+
 // !
+// const settings = {
+//   theme: 'dark',
+//   isAuthenticated: true,
+//   options: [1, 2, 3],
+// };
+
+// localStorage.setItem('settings', JSON.stringify(settings));
+
+// const savedSettings = localStorage.getItem('settings');
+// console.log(savedSettings);
+// const parsedSettings = JSON.parse(savedSettings);
+// console.log(parsedSettings); // settings object
+
 // !
+// localStorage.setItem('ui-theme', 'dark');
+// console.log(localStorage.getItem('ui-theme')); // "dark"
+
+// localStorage.removeItem('ui-theme');
+// console.log(localStorage.getItem('ui-theme')); // null
+
 // !
+// localStorage.setItem('ui-theme', 'light');
+// localStorage.setItem('sidebar', 'expanded');
+// localStorage.setItem('notification-level', 'mute');
+// console.log(localStorage.getItem('ui-theme')); // "light"
+// console.log(localStorage.getItem('sidebar')); // "expanded"
+// console.log(localStorage.getItem('notification-level')); // "mute"
+
+// localStorage.clear();
+// console.log(localStorage.getItem('ui-theme')); // null
+// console.log(localStorage.getItem('sidebar')); // null
+// console.log(localStorage.getItem('notification-level')); // null
+
 // !
+// const save = (key, value) => {
+//   try {
+//     const serializedState = JSON.stringify(value);
+//     localStorage.setItem(key, serializedState);
+//   } catch (error) {
+//     console.error('Set state error: ', error.message);
+//   }
+// };
+
+// const load = key => {
+//   try {
+//     const serializedState = localStorage.getItem(key);
+//     return serializedState === null ? undefined : JSON.parse(serializedState);
+//   } catch (error) {
+//     console.error('Get state error: ', error.message);
+//   }
+// };
+
+// export default {
+//   save,
+//   load,
+// };
+
 // !
+// [Шпаргалка 1](https://tproger.ru/translations/bash-cheatsheet/)
+// [Шпаргалка 2](https://habr.com/ru/company/ruvds/blog/445270/)
+
 // !
 // !
 // !
