@@ -938,7 +938,7 @@
 // console.log(max([5])); // 5
 
 // !
-function makeUpperCase(str) {
-  // Code here
-  return str.toUpperCase();
-}
+// function makeUpperCase(str) {
+//   // Code here
+//   return str.toUpperCase();
+// }
